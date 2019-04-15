@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DGFAB</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dealers_">Dealers_Activity</string>
+    <string name="shop_by_category">Shop by \n Category</string>
+
+    <string-array name="repeat">
+
+        <item>Once a Week </item>
+        <item>Daily </item>
+        <item>Set Manual </item>
+
+    </string-array>
+
+    <string-array name="addlist">
+        <item> Personal</item>
+        <item> Group</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="2.5dp"
+    android:paddingBottom="2.5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:id="@+id/tender_desct"
+    >
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF3360DC"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenders"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:typeface="serif"   />
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/clickme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/lie"
+                android:layout_width="70dp"
+                android:layout_height="70dip"
+                android:src="@drawable/prof"></ImageView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cart_pluyout111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/frome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Anurag Pathak"
+                android:textColor="#040404"
+                android:textSize="15dip"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/cartv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="Date: 15-04-2019"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cart_pluyout111"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/plist_prixt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="3 AC and 2 Frize"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                />
+
+            <TextView
+                android:id="@+id/plist_weight_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:paddingRight="25dip"
+                android:text="rs. 40000 to 60000"
+                android:textColor="#343434"
+                android:textSize="12dip" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clickme3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="70dp"
+                android:layout_height="70dip"
+                android:src="@drawable/prof"></ImageView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cart_pluyout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/from_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Anurag Pathak"
+                android:textColor="#040404"
+                android:textSize="15dip"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/cart_product_quantity_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="Date: 15-04-2019"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cart_pluyout"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/plis_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="3 AC and 2 Frize"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                />
+
+            <TextView
+                android:id="@+id/plistx1t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:paddingRight="25dip"
+                android:text="rs. 40000 to 60000"
+                android:textColor="#343434"
+                android:textSize="12dip" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clickm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thum77bnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/list_illmage"
+                android:layout_width="70dp"
+                android:layout_height="70dip"
+                android:src="@drawable/prof"></ImageView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cart_pluyout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/from_nam1e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Anurag Pathak"
+                android:textColor="#040404"
+                android:textSize="15dip"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/cart_producntity_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="Date: 15-04-2019"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cart_pluyout1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/plis_text111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="3 AC and 2 Frize"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                />
+
+            <TextView
+                android:id="@+id/plistxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:paddingRight="25dip"
+                android:text="rs. 40000 to 60000"
+                android:textColor="#343434"
+                android:textSize="12dip" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

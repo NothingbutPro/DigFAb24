@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ics.newapp">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Tender_Description"></activity>
+        <activity android:name=".Tender_list" />
+        <activity android:name=".Followers" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BillingHistory" />
+        <activity
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TenderHistory" />
+        <activity android:name=".TenderDetails" />
+        <activity android:name=".New_Tender_Buyer" />
+        <activity android:name=".Addto_cart" />
+        <activity android:name=".Order_Placed" />
+        <activity android:name=".Check_out" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ChatSentMessage" />
+        <activity android:name=".ViewersActivity" />
+        <activity android:name=".InvoceVActivity" />
+        <activity android:name=".Diary_Maintain" />
+
+    </application>
+
+</manifest>
