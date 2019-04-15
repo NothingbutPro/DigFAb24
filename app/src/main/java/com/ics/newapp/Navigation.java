@@ -17,6 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ics.newapp.SeasonManager.SessionManager;
 import com.ics.newapp.adapter.MyAdapter;
@@ -28,6 +30,8 @@ public class Navigation extends AppCompatActivity
     TabLayout tabLayout;
     ViewPager viewPager;
     SessionManager sessionManager;
+    TextView id_name , type;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +60,17 @@ public class Navigation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        View header = navigationView.getHeaderView(0);
+        imageView= header.findViewById(R.id.imageView);
+        id_name = header.findViewById(R.id.id_name);
+        type = header.findViewById(R.id.type);
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager1);
         sessionManager = new SessionManager(this);
         if(sessionManager.isLoggedIn().equals("Dealers"))
         {
+            id_name.setText("Parag Sharma");
+            type.setText("Footwear Dealer");
             tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Buyers Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
@@ -70,9 +79,14 @@ public class Navigation extends AppCompatActivity
             nav_Menu.findItem(R.id.tender).setVisible(false);
         }if(sessionManager.isLoggedIn().equals("Manufacturer"))
         {
+            id_name.setText("Nike Brand and NIKE, Inc.");
+            type.setText("media.relations@nike.com");
+            imageView.setImageResource(R.drawable.complogo);
+
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
+            nav_Menu.findItem(R.id.tenders).setVisible(false);
             tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
