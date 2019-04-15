@@ -12,7 +12,7 @@ public class New_Tender_Buyer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_tender_buyer);
 
-        onBackPressed();
+
     }
 
     @Override

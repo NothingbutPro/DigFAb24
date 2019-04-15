@@ -35,6 +35,12 @@
             android:id="@+id/chat"
             android:icon="@drawable/follower"
             android:title="Chat" />
+
+        <item
+            android:id="@+id/accounting"
+            android:icon="@drawable/follower"
+            android:title="Accounting" />
+
     </group>
 
     <item android:title="Communicate">

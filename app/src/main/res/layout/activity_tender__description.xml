@@ -281,7 +281,7 @@
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@color/colorPrimary"
-                            android:text="Conform"
+                            android:text="Apply"
                             android:textAllCaps="false"
                             android:textColor="#fff" />
                     </LinearLayout>
@@ -300,7 +300,7 @@
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@color/colorPrimary"
-                            android:text="Reply"
+                            android:text="Decline"
                             android:textAllCaps="false"
                             android:textColor="#fff" />
                     </LinearLayout>
