@@ -77,7 +77,7 @@ public class SignUpFreg extends Fragment {
         });
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
-        spin = (Spinner)view.findViewById(R.id.spin);
+        spin = (Spinner)view.findViewById(R.id.spin12);
 
         //Creating the ArrayAdapter instance having the country list
         ArrayAdapter aa = new ArrayAdapter(getActivity(), R.layout.custom_spinner , country);
