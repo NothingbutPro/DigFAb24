@@ -36,9 +36,10 @@ public class FregmentSection extends AppCompatActivity {
         tabtender=(TabLayout)findViewById(R.id.tabtender);
         viewPagerten=(ViewPager)findViewById(R.id.viewPagerten);
 
+        tabtender.addTab(tabtender.newTab().setText("New Tender"));
         tabtender.addTab(tabtender.newTab().setText("Pending Tender"));
         tabtender.addTab(tabtender.newTab().setText("Completed Tender"));
-        tabtender.addTab(tabtender.newTab().setText("New Tender"));
+
         tabtender.setTabGravity(TabLayout.GRAVITY_FILL);
         tabtender.setSmoothScrollingEnabled(true);
         tabtender.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));

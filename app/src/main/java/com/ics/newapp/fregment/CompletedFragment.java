@@ -10,16 +10,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.ics.newapp.InvoceVActivity;
 import com.ics.newapp.Navigation;
 import com.ics.newapp.R;
 
 
 public class CompletedFragment extends Fragment {
 
-    public CompletedFragment() {
-        // Required empty public constructor
-    }
+//    public CompletedFragment() {
+//        // Required empty public constructor
+//    }
 
     @Nullable
     @Override
@@ -30,6 +33,16 @@ public class CompletedFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+
+        Button ll=view.findViewById(R.id.bt_comp);
+        ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), InvoceVActivity.class);
+                startActivity(intent);
+            }
+        });
         super.onViewCreated(view, savedInstanceState);
 
     }
