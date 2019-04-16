@@ -19,11 +19,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ics.newapp.SeasonManager.SessionManager;
 import com.ics.newapp.adapter.MyAdapter;
 import com.ics.newapp.adapter.NvigationAdapter;
 import com.ics.newapp.fregment.BuyerFragment;
+import com.ics.newapp.fregment.Order_Taken;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,7 +74,7 @@ public class Navigation extends AppCompatActivity
             id_name.setText("Parag Sharma");
             type.setText("Footwear Dealer");
             tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
-            tabLayout.addTab(tabLayout.newTab().setText("Buyers Deals"));
+            tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
@@ -97,9 +99,13 @@ public class Navigation extends AppCompatActivity
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         if(sessionManager.isLoggedIn().equals("Buyers")){
             tabLayout.setVisibility(View.GONE);
+            id_name.setText("Nilesh Upadhaya ");
+            type.setText("NY@gmail.com");
+
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tenders).setVisible(false);
+            nav_Menu.findItem(R.id.accounting).setVisible(false);
             FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
             tx.replace(R.id.content_frame, new BuyerFragment());
             tx.commit();
@@ -173,6 +179,20 @@ public class Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+            // Handle the camera action
+        }  if (id == R.id.nav_oders) {
+            Intent intent = new Intent(Navigation.this,Order_Informations.class);
+            startActivity(intent);
+//            tabLayout.removeAllTabs();
+//        //    tabLayout.removeAllViewsInLayout();
+//            viewPager.removeAllViews();
+//            viewPager.removeAllViewsInLayout();
+//            Toast.makeText(this, "Orders", Toast.LENGTH_SHORT).show();
+//            tabLayout.addTab(tabLayout.newTab().setText("Order From Manufacturer"));
+//            tabLayout.addTab(tabLayout.newTab().setText("Order To Buyer"));
+//            FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+//            tx.replace(R.id.content_frame, new Order_Taken());
+//            tx.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
             Intent intent = new Intent(Navigation.this,ProfileActivity.class);
