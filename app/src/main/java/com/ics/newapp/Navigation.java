@@ -230,6 +230,10 @@ public class Navigation extends AppCompatActivity
             Intent intent = new Intent(Navigation.this,Accounting.class);
             startActivity(intent);
         }
+        else if (id == R.id.dealerslist) {
+            Intent intent = new Intent(Navigation.this, DealersList.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -10,11 +10,13 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
+        android:largeHeap="false"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:largeHeap="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".Order_Informations"></activity>
+        <activity android:name=".AddDealer"></activity>
+        <activity android:name=".DealersList" />
+        <activity android:name=".Order_Informations" />
         <activity android:name=".Tender_Description" />
         <activity android:name=".Tender_list" />
         <activity android:name=".Followers" />
@@ -45,7 +47,7 @@
         <activity android:name=".InvoceVActivity" />
         <activity android:name=".Diary_Maintain" />
         <activity android:name=".Accounting" />
-        <activity android:name=".FregmentSection"></activity>
+        <activity android:name=".FregmentSection" />
     </application>
 
 </manifest>

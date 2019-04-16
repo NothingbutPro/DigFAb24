@@ -34,7 +34,7 @@
             android:shadowDy="2"
             android:shadowRadius="1.0"
             android:text="D G F A B"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold|italic" />
 

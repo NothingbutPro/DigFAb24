@@ -41,6 +41,12 @@
             android:icon="@drawable/follower"
             android:title="Accounting" />
 
+        <item
+            android:id="@+id/dealerslist"
+            android:icon="@drawable/follower"
+            android:title="Dealers List" />
+
+
     </group>
 
     <item android:title="Communicate">

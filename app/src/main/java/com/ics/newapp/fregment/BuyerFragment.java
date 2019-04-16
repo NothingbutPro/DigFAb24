@@ -169,5 +169,4 @@ public class BuyerFragment extends Fragment {
         }, 3000, 3000);
     }
 
-
 }
