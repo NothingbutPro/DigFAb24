@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tender_Description"></activity>
+        <activity android:name=".Order_Informations"></activity>
+        <activity android:name=".Tender_Description" />
         <activity android:name=".Tender_list" />
         <activity android:name=".Followers" />
         <activity android:name=".ProfileActivity" />
@@ -43,7 +44,6 @@
         <activity android:name=".InvoceVActivity" />
         <activity android:name=".Diary_Maintain" />
         <activity android:name=".Accounting" />
-
     </application>
 
 </manifest>

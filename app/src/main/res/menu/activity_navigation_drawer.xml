@@ -13,7 +13,7 @@
             android:icon="@drawable/profile"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_oders"
             android:icon="@drawable/order"
             android:title="Order" />
         <item
