@@ -26,14 +26,16 @@ public class TenderAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                PendingTenderFreg pendingTenderFreg = new PendingTenderFreg();
-                return pendingTenderFreg;
-            case 1:
-                CompletedTenderFreg completedTenderFreg = new CompletedTenderFreg();
-                return completedTenderFreg;
-            case 2:
                 NewTenderFreg newTenderFreg = new NewTenderFreg();
                 return newTenderFreg;
+
+            case 1:
+                PendingTenderFreg pendingTenderFreg = new PendingTenderFreg();
+                return pendingTenderFreg;
+
+            case 2:
+                CompletedTenderFreg completedTenderFreg = new CompletedTenderFreg();
+                return completedTenderFreg;
             default:
                 return null;
         }

@@ -7,10 +7,11 @@
     tools:context=".fregment.CompletedFragment">
 
     <LinearLayout
+        android:id="@+id/comp"
         android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/relativeLayout"
@@ -32,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/sander"
+                    android:src="@drawable/aa"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
@@ -87,7 +88,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/bt_add"
+                            android:id="@+id/bt_comp"
                             android:layout_width="match_parent"
                             android:layout_height="35dp"
                             android:background="@drawable/btn_shape"
@@ -121,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/complogo"
+                    android:src="@drawable/prof"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
