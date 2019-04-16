@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.ics.newapp.Affiliate_Marketing;
 import com.ics.newapp.Navigation;
 import com.ics.newapp.R;
 import com.ics.newapp.SeasonManager.SessionManager;
@@ -24,7 +25,7 @@ public class SignUpFreg extends Fragment {
     Button signup;
     //  View view;
     Spinner spin;
-    String[] country = {"Manufacturer", "Dealers", "Buyers"};
+    String[] country = {"Manufacturer", "Dealers", "Buyers","Affiliate Marketer"};
     public SessionManager sessionManager;
 
     @Nullable
@@ -51,9 +52,16 @@ public class SignUpFreg extends Fragment {
                 if(spin.getSelectedItem() !=null)
                 {
                     sessionManager.setLogin(true , spin.getSelectedItem().toString());
-                    Toast.makeText(v.getContext(), "is login is "+sessionManager.isLoggedIn(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getActivity(), Navigation.class);
-                    startActivity(intent);
+
+                    if (spin.getSelectedItem().equals("Affiliate Marketer")){
+                        Intent intent = new Intent(getActivity(), Affiliate_Marketing.class);
+                        startActivity(intent);
+                    }else{
+                        Intent intent = new Intent(getActivity(), Navigation.class);
+                        startActivity(intent);
+                    }
+                    Toast.makeText(v.getContext(), "login is "+sessionManager.isLoggedIn(), Toast.LENGTH_SHORT).show();
+
                 }else{
 
                 }
