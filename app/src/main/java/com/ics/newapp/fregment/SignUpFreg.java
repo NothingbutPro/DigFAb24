@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.ics.newapp.Affiliate_Marketing;
+import com.ics.newapp.Main2Activity;
 import com.ics.newapp.Navigation;
 import com.ics.newapp.R;
 import com.ics.newapp.SeasonManager.SessionManager;
@@ -54,7 +55,7 @@ public class SignUpFreg extends Fragment {
                     sessionManager.setLogin(true , spin.getSelectedItem().toString());
 
                     if (spin.getSelectedItem().equals("Affiliate Marketer")){
-                        Intent intent = new Intent(getActivity(), Affiliate_Marketing.class);
+                        Intent intent = new Intent(getActivity(), Main2Activity.class);
                         startActivity(intent);
                     }else{
                         Intent intent = new Intent(getActivity(), Navigation.class);
