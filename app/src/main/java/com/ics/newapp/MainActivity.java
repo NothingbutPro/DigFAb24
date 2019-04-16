@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
-
+        MainActivity.this.setTitle("DIGFAB");
         tabLayout.addTab(tabLayout.newTab().setText("SIGN IN"));
         tabLayout.addTab(tabLayout.newTab().setText("SIGN UP"));
     //    tabLayout.addTab(tabLayout.newTab().setText("Movie"));

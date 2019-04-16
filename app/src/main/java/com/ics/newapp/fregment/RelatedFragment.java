@@ -34,15 +34,15 @@ public class RelatedFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MyListData[] myListData = new MyListData[] {
-                new MyListData("Asian Umbrella Manufacturers", R.drawable.complogo),
-                new MyListData("Aarti Industries Ltd", R.drawable.sander),
-                new MyListData("Abbott India Ltd", R.drawable.complogo),
+                new MyListData("Prakash Footwear", R.drawable.complogo),
+                new MyListData("Angel Cosmetics", R.drawable.sander),
+                new MyListData("Kq Beauty Crown", R.drawable.complogo),
                 new MyListData(
-                        "ACC Ltd", R.drawable.sander),
+                        "Anitas Aromatic Solutions", R.drawable.sander),
                 new MyListData(
-                        "Ajanta Pharma Ltd", R.drawable.complogo),
-                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
-                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+                        "Calcutta Footwear", R.drawable.complogo),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
         };
 

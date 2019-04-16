@@ -41,9 +41,9 @@ public class Navigation extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        this.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+//        this.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
        // ((AppCompatActivity)ScrollingActivity.this).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
         sessionManager = new SessionManager(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class Navigation extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+        Navigation.this.setTitle("DGFAB");
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
@@ -89,13 +89,10 @@ public class Navigation extends AppCompatActivity
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
             nav_Menu.findItem(R.id.tenders).setVisible(false);
-            tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
+            tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
         }
-
-
-
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         if(sessionManager.isLoggedIn().equals("Buyers")){
             tabLayout.setVisibility(View.GONE);
@@ -104,6 +101,7 @@ public class Navigation extends AppCompatActivity
 
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
+
             nav_Menu.findItem(R.id.tenders).setVisible(false);
             nav_Menu.findItem(R.id.accounting).setVisible(false);
             FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
@@ -113,7 +111,6 @@ public class Navigation extends AppCompatActivity
 
         }else {
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
             tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
             tabLayout.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
             tabLayout.setTabTextColors(Color.parseColor("#CECACA"), Color.parseColor("#ffffff"));
@@ -154,6 +151,12 @@ public class Navigation extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
+        if(sessionManager.isLoggedIn().equals("Buyers"))
+        {
+            MenuItem menuItem = menu.findItem(R.id.cart_item);
+            menuItem.setVisible(true);
+        }
+
         return true;
     }
 
@@ -165,9 +168,10 @@ public class Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.locsisdf) {
-            Intent intent = new Intent(Navigation.this , MainActivity.class);
+            Intent intent = new Intent(Navigation.this, MainActivity.class);
             startActivity(intent);
             return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -64,10 +64,11 @@ public class SignInFreg extends Fragment implements
                 if (spinalo.getSelectedItem().equals("Affiliate Marketer")){
                     Intent intent = new Intent(getActivity(), Main2Activity.class);
                     startActivity(intent);
-                }else{
+                }else {
                     Intent intent = new Intent(getActivity(), Navigation.class);
                     startActivity(intent);
                 }
+
 
             }
         });

@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/boythree"
+                    android:src="@drawable/complogo"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
@@ -69,7 +69,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:text="Ram Sharma"
+                            android:text="Nike Brand and NIKE, Inc."
                             android:id="@+id/textView"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -82,14 +82,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
-                            android:text="Infocentroid Software Solutions"
+                            android:text="Footwear"
                             android:textSize="12dp" />
 
                         <TextView
                             android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Refrigerator Manufacturer"
+                            android:text=" Mumbai / Maharashtra - 400030"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/boytwo"
+                    android:src="@drawable/alogo"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
@@ -153,7 +153,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:text="Aryan Sharma"
+                            android:text="King Metal Products"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
@@ -170,7 +170,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Refrigerator Manufacturer"
+                            android:text=" Mumbai / Maharashtra - 400022"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/boyone"
+                    android:src="@drawable/aa"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
@@ -234,7 +234,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:text="Aarav Shah"
+                            android:text="Aarti Industries Ltd"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
@@ -245,13 +245,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
-                            android:text="Infocentroid Software Solutions"
+                            android:text="Industrial Chemical"
                             android:textSize="12dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Refrigerator Manufacturer"
+                            android:text="Mumbai / Maharashtra - 400080"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -294,7 +294,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.80"
-                    android:src="@drawable/boyfour"
+                    android:src="@drawable/as"
                     app:civ_border_color="#000"
                     app:civ_border_width="0.5dp" />
 
@@ -315,7 +315,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:text="Aryan Sharma"
+                            android:text="Asian Paint Ltd"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
@@ -326,13 +326,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="3dp"
-                            android:text="Infocentroid Software Solutions"
+                            android:text="Chemical"
                             android:textSize="12dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Refrigerator Manufacturer"
+                            android:text="Mumbai / Maharashtra - 400055"
                             android:textSize="12dp" />
 
                     </LinearLayout>

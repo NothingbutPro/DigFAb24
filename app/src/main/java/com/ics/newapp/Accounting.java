@@ -34,7 +34,7 @@ public class Accounting extends AppCompatActivity {
             "    </thead>\n" +
             "    <tbody>\n" +
             "      <tr>\n" +
-            "        <td>Manufacture</td>\n" +
+            "        <td>Manufacturer</td>\n" +
             "        <td>Rs. 1000</td>\n" +
             "        <td>Rs. 700</td>\n" +
             "        <td>Rs. 300 cr </td>\n" +

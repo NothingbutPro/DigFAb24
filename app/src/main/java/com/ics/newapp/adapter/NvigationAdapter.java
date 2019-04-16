@@ -52,7 +52,6 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                     PendingFragment pendingFragment = new PendingFragment();
                     return pendingFragment;
                 }
-
             case 2:
                 if(sessionManager.isLoggedIn().equals("Dealers"))
                 {
