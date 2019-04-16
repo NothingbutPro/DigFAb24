@@ -25,6 +25,7 @@
         <item> Personal</item>
         <item> Group</item>
     </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
