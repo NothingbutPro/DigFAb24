@@ -105,9 +105,9 @@ public class Main2Activity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-            Intent i=new Intent(Main2Activity.this, Main2Activity.class);
+            Intent i=new Intent(Main2Activity.this, TotalAffiliateOrder.class);
             startActivity(i);
-            finish();
+            //finish();
 
         } else if (id == R.id.nav_slideshow) {
             Intent i=new Intent(Main2Activity.this, New_Affiliate_Program.class);
