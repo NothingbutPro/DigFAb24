@@ -26,9 +26,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailsActivity" />
-        <activity android:name=".Affiliate_Marketing" />
-        <activity android:name=".New_Affiliate_Program" />
-
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,8 +46,6 @@
         <activity android:name=".Diary_Maintain" />
         <activity android:name=".Accounting" />
         <activity android:name=".FregmentSection"></activity>
-        <activity android:name=".Main2Activity"></activity>
-        <activity android:name=".TotalAffiliateOrder"></activity>
     </application>
 
 </manifest>
