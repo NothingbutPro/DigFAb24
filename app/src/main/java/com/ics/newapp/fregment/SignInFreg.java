@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.ics.newapp.Affiliate_Marketing;
 import com.ics.newapp.Navigation;
 import com.ics.newapp.R;
 import com.ics.newapp.SeasonManager.SessionManager;
@@ -58,8 +59,16 @@ public class SignInFreg extends Fragment implements
             public void onClick(View v) {
                 sessionManager.setLogin(true , spinalo.getSelectedItem().toString());
                 Toast.makeText(v.getContext(), "is login is "+sessionManager.isLoggedIn(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), Navigation.class);
-                startActivity(intent);
+
+                if (spin.getSelectedItem().equals("Affiliate Marketer")){
+                    Intent intent = new Intent(getActivity(), Affiliate_Marketing.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(getActivity(), Navigation.class);
+                    startActivity(intent);
+                }
+
+
             }
         });
     }
