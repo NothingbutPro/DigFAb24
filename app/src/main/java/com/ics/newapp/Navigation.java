@@ -213,7 +213,7 @@ public class Navigation extends AppCompatActivity
 
         }
         else if (id == R.id.tender) {
-            Intent intent = new Intent(Navigation.this,TenderHistory.class);
+            Intent intent = new Intent(Navigation.this,FregmentSection.class);
             startActivity(intent);
         } else if (id == R.id.tenders) {
             Intent intent = new Intent(Navigation.this,Tender_list.class);
