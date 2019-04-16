@@ -44,6 +44,7 @@
         <activity android:name=".InvoceVActivity" />
         <activity android:name=".Diary_Maintain" />
         <activity android:name=".Accounting" />
+        <activity android:name=".FregmentSection"></activity>
     </application>
 
 </manifest>
