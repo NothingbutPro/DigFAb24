@@ -9,7 +9,7 @@
         android:id="@+id/toolbar_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF3360DC"
+        android:background="@color/colorPrimary"
         android:fitsSystemWindows="true">
 
         <TextView

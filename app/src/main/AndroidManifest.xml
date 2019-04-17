@@ -26,6 +26,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailsActivity" />
+        <activity android:name=".Tracked_Order" />
+        <activity android:name=".OrderTracking" />
+        <activity android:name=".TotalAffiliateOrder" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,10 +52,10 @@
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".Affiliate_Marketing"></activity>
         <activity android:name=".New_Affiliate_Program"></activity>
-        <activity android:name=".TotalAffiliateOrder"></activity>
         <activity android:name=".Accounting_manufacture"></activity>
         <activity android:name=".DealersList"></activity>
         <activity android:name=".AddDealer"></activity>
+        <activity android:name=".Tender_apply"></activity>
     </application>
 
 </manifest>

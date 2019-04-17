@@ -98,7 +98,7 @@
                     android:gravity="center"
                     android:orientation="horizontal">
                     <TextView
-                        android:text="Parag (Dealer)"
+                        android:text="Prakash"
                         android:id="@+id/student_name_chat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

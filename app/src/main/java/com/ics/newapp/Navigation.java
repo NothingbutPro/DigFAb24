@@ -33,6 +33,7 @@ public class Navigation extends AppCompatActivity
     ViewPager viewPager;
     SessionManager sessionManager;
     TextView id_name , type;
+   public static NavigationView navigationView;
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         Navigation.this.setTitle("DGFAB");
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
         imageView= header.findViewById(R.id.imageView);

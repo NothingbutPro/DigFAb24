@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.ics.newapp.InvoceVActivity;
 import com.ics.newapp.R;
+import com.ics.newapp.TenderDetails;
 import com.ics.newapp.model.Movie;
 
 import java.util.List;
@@ -50,7 +51,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , InvoceVActivity.class);
+                Intent intent = new Intent(v.getContext() , TenderDetails.class);
                 v.getContext().startActivity(intent);
             }
         });
