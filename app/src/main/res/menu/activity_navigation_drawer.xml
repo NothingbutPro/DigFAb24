@@ -56,7 +56,7 @@
                 android:icon="@drawable/billing"
                 android:title="Billing History" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/logout"
                 android:title="Logout" />
         </menu>

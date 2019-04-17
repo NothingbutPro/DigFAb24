@@ -73,12 +73,15 @@ public class Navigation extends AppCompatActivity
         {
             id_name.setText("Parag Sharma");
             type.setText("Footwear Dealer");
+
             tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
+
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
+            nav_Menu.findItem(R.id.dealerslist).setVisible(false);
         }if(sessionManager.isLoggedIn().equals("Manufacturer"))
         {
             id_name.setText("Nike Brand and NIKE, Inc.");
@@ -89,18 +92,24 @@ public class Navigation extends AppCompatActivity
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
             nav_Menu.findItem(R.id.tenders).setVisible(false);
+
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
         }
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         if(sessionManager.isLoggedIn().equals("Buyers")){
+
             tabLayout.setVisibility(View.GONE);
+            navigationView = (NavigationView)findViewById(R.id.nav_view);
+            Menu nav_Menu = navigationView.getMenu();
+            nav_Menu.findItem(R.id.accounting).setVisible(false);
+            nav_Menu.findItem(R.id.dealerslist).setVisible(false);
             id_name.setText("Nilesh Upadhaya ");
             type.setText("NY@gmail.com");
 
             navigationView = (NavigationView)findViewById(R.id.nav_view);
-            Menu nav_Menu = navigationView.getMenu();
+             nav_Menu = navigationView.getMenu();
 
             nav_Menu.findItem(R.id.tenders).setVisible(false);
             nav_Menu.findItem(R.id.accounting).setVisible(false);
@@ -151,10 +160,41 @@ public class Navigation extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
+
         if(sessionManager.isLoggedIn().equals("Buyers"))
+        {
+
+            if(sessionManager.isSkipped())
         {
             MenuItem menuItem = menu.findItem(R.id.cart_item);
             menuItem.setVisible(true);
+            MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
+            menuItem1.setTitle("Hi Nilesh");
+        }
+        }
+        if(sessionManager.isLoggedIn().equals("Dealers"))
+        {
+            if(sessionManager.isSkipped())
+            {
+                MenuItem menuItem = menu.findItem(R.id.cart_item);
+//                menuItem.setVisible(true);
+                MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
+                menuItem1.setTitle("Hi Parag Sharma");
+            }
+
+
+        }
+        if(sessionManager.isLoggedIn().equals("Manufacturer"))
+        {
+            if(sessionManager.isSkipped())
+            {
+                MenuItem menuItem = menu.findItem(R.id.cart_item);
+//                menuItem.setVisible(true);
+                MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
+                menuItem1.setTitle(" Hi Manufacturer");
+            }
+
+
         }
 
         return true;
@@ -171,7 +211,6 @@ public class Navigation extends AppCompatActivity
             Intent intent = new Intent(Navigation.this, MainActivity.class);
             startActivity(intent);
             return true;
-
         }
         return super.onOptionsItemSelected(item);
     }
@@ -232,6 +271,10 @@ public class Navigation extends AppCompatActivity
         }
         else if (id == R.id.dealerslist) {
             Intent intent = new Intent(Navigation.this, DealersList.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_logout) {
+            sessionManager.setSkipped(false);
+            Intent intent = new Intent(Navigation.this, MainActivity.class);
             startActivity(intent);
         }
 

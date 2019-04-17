@@ -35,15 +35,15 @@ public class Accounting extends AppCompatActivity {
             "    <tbody>\n" +
             "      <tr>\n" +
             "        <td>Manufacturer</td>\n" +
-            "        <td>Rs. 1000</td>\n" +
+            "        <td></td>\n" +
             "        <td>Rs. 700</td>\n" +
-            "        <td>Rs. 300 cr </td>\n" +
+            "        <td> </td>\n" +
             "      </tr>\n" +
             "      <tr>\n" +
             "        <td>Buyer</td>\n" +
             "        <td>Rs. 5000</td>\n" +
-            "        <td>Rs. 3000</td>\n" +
-            "        <td>Rs. 2000 cr </td>\n" +
+            "        <td></td>\n" +
+            "        <td>Rs. 4300 cr </td>\n" +
             "      </tr>\n" +
             "     \n" +
             "    </tbody>\n" +

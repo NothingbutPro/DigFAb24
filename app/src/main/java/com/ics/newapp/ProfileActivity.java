@@ -55,8 +55,8 @@ public class ProfileActivity extends AppCompatActivity {
         }
         if(sessionManager.isLoggedIn().equals("Affiliate Marketer"))
         {
-            profile_image.setImageResource(R.drawable.boythree);
-            proname.setText("Nilesh Upadhaya ");
+//            profile_image.setImageResource(R.drawable.boythree);
+            proname.setText("Prakash Upadhaya ");
             mainid.setText("Affiliate Marketer");
         }
         viewers.setOnClickListener(new View.OnClickListener() {
