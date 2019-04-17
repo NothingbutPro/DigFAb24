@@ -266,8 +266,16 @@ public class Navigation extends AppCompatActivity
             startActivity(intent);
         }
         else if (id == R.id.accounting) {
-            Intent intent = new Intent(Navigation.this,Accounting.class);
-            startActivity(intent);
+            if(sessionManager.isLoggedIn().equals("Manufacturer")){
+                Intent intent = new Intent(Navigation.this,Accounting_manufacture.class);
+                startActivity(intent);
+
+            }else {
+                Intent intent = new Intent(Navigation.this,Accounting.class);
+                startActivity(intent);
+            }
+
+
         }
         else if (id == R.id.dealerslist) {
             Intent intent = new Intent(Navigation.this, DealersList.class);
