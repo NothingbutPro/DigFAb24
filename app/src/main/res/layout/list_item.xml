@@ -20,12 +20,11 @@
         android:id="@+id/libelow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal"
         android:weightSum="1">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
+            android:id="@+id/dunb_image"
             android:layout_width="match_parent"
             android:layout_height="100dp"
 
@@ -59,7 +58,7 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/textbrand"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="3dp"
@@ -82,7 +81,7 @@
                     android:id="@+id/textView2df"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Date/Time 12/04/2019"
+                    android:text="Date/Time 18/04/2019"
                     android:textSize="12dp" />
 
             </LinearLayout>

@@ -56,13 +56,13 @@ public class BillingHistory extends AppCompatActivity {
     }
 
     private void prepareMovieData() {
-        Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
+        Movie movie = new Movie("Casual shoes", "FootWear", "2015");
         movieList.add(movie);
 
-        movie = new Movie("Inside Out", "Animation, Kids & Family", "2015");
+        movie = new Movie("T-shirt", "Clothes", "2015");
         movieList.add(movie);
 
-        movie = new Movie("Star Wars: Episode VII", "Action", "2015");
+        movie = new Movie("Shirt", "Clothes", "2015");
         movieList.add(movie);
 
         movie = new Movie("Shaun the Sheep", "Animation", "2015");

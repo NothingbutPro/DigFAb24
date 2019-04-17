@@ -38,7 +38,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
         holder.textView.setText(listdata[position].getDescription());
-       // holder.imageView.setImageResource(listdata[position].getImgId());
+//        if(position ==0)
+//        {
+
+            holder.imageView.setImageResource(R.drawable.prof);
+//        }
+
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +56,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(),DetailsActivity.class);
+                intent.putExtra("ideaname" , ""+holder.textView.getText().toString());
                 view.getContext().startActivity(intent);
                 // Toast.makeText(view.getContext(),"click on item",Toast.LENGTH_LONG).show();
             }
@@ -68,11 +74,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public TextView textView;
         public RelativeLayout relativeLayout;
         private Button bt_add;
+        TextView textView2df,textbrand;
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
-            this.imageView = (CircleImageView) itemView.findViewById(R.id.imageView);
+            this.imageView = (CircleImageView) itemView.findViewById(R.id.dunb_image);
             this.textView = (TextView) itemView.findViewById(R.id.textView);
+            this.textbrand = itemView.findViewById(R.id.textbrand);
+            this.textView2df = itemView.findViewById(R.id.textView2df);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
             bt_add = (Button) itemView.findViewById(R.id.bt_add);
         }

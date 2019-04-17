@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|center"
-            android:text="Profile"
+            android:text="Order Information"
             android:textColor="#fff"
             android:textSize="18dp"
             android:typeface="serif" />

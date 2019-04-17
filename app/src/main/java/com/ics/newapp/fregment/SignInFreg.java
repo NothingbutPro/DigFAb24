@@ -59,6 +59,7 @@ public class SignInFreg extends Fragment implements
             @Override
             public void onClick(View v) {
                 sessionManager.setLogin(true , spinalo.getSelectedItem().toString());
+                sessionManager.setSkipped(true);
                 Toast.makeText(v.getContext(), "is login is "+sessionManager.isLoggedIn(), Toast.LENGTH_SHORT).show();
 
                 if (spinalo.getSelectedItem().equals("Affiliate Marketer")){

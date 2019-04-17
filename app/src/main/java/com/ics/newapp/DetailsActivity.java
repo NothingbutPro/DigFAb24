@@ -36,16 +36,26 @@ public class DetailsActivity extends AppCompatActivity {
     DatePickerDialog.OnDateSetListener date;
     private String dateFlage;
     EditText dtdg;
-
+    String ideaname;
+    TextView bjtx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-
+        bjtx = findViewById(R.id.bjtx);
         toolbar_prof = (Toolbar) findViewById(R.id.toolbar_prof);
         // Title and subtitle
         // toolbar_prof.setTitle(R.string.about_toolbar_title);
+        try{
+            if(getIntent().getStringExtra("ideaname") !=null)
+            {
+                bjtx.setText(getIntent().getStringExtra("ideaname"));
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         toolbar_prof.setNavigationIcon(R.drawable.arrow);
         toolbar_prof.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

@@ -48,6 +48,7 @@ public class BuyerFragment extends Fragment {
     private static final Integer[] XMEN = {R.drawable.one, R.drawable.newonw,R.drawable.newtt};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     Button btn;
+    LinearLayout sad;
     HeaderAdapter madapter;
     private RecyclerView rv_autoScroll;
     private final Runnable SCROLLING_RUNNABLE = new Runnable() {
@@ -65,9 +66,8 @@ public class BuyerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_buyer, container, false);
         //     sliderLayout = view.findViewById(R.id.imageSlider);
 
-
-        proid = view.findViewById(R.id.proid);
-        proid.setOnClickListener(new View.OnClickListener() {
+        sad = view.findViewById(R.id.sad);
+        sad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Addto_cart.class);

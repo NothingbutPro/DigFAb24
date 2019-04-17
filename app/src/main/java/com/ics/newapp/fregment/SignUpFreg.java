@@ -50,6 +50,7 @@ public class SignUpFreg extends Fragment {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sessionManager.setSkipped(true);
                 if(spin.getSelectedItem() !=null)
                 {
                     sessionManager.setLogin(true , spin.getSelectedItem().toString());

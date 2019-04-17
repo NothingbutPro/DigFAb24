@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -46,8 +48,12 @@
 
 
     </android.support.v7.widget.Toolbar>
-
+    <FrameLayout
+        android:id="@+id/frame_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/hidethatsht"
         android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -88,6 +94,7 @@
                     android:weightSum="1">
 
                     <LinearLayout
+                        android:id="@+id/to_avli"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.30"
@@ -243,8 +250,11 @@
                             android:textSize="12dp" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
+
         </RelativeLayout>
 
         <LinearLayout
@@ -264,6 +274,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    </FrameLayout>
 
 </LinearLayout>
