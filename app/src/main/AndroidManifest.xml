@@ -10,24 +10,16 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:largeHeap="false"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
+        android:largeHeap="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tracked_Order"></activity>
-        <activity android:name=".Tender_apply" />
-        <activity android:name=".AddDealer" />
-        <activity android:name=".DealersList" />
-        <activity android:name=".Order_Informations" />
+        <activity android:name=".Order_Informations"></activity>
         <activity android:name=".Tender_Description" />
         <activity android:name=".Tender_list" />
         <activity android:name=".Followers" />
-        <activity android:name=".Main2Activity"></activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BillingHistory" />
-        <activity android:name=".Affiliate_Marketing"></activity>
-        <activity android:name=".New_Affiliate_Program"></activity>
-        <activity android:name=".TotalAffiliateOrder"></activity>
         <activity
             android:name=".Navigation"
             android:label="@string/title_activity_navigation"
@@ -53,7 +45,14 @@
         <activity android:name=".InvoceVActivity" />
         <activity android:name=".Diary_Maintain" />
         <activity android:name=".Accounting" />
-        <activity android:name=".FregmentSection" />
+        <activity android:name=".FregmentSection"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Affiliate_Marketing"></activity>
+        <activity android:name=".New_Affiliate_Program"></activity>
+        <activity android:name=".TotalAffiliateOrder"></activity>
+        <activity android:name=".Accounting_manufacture"></activity>
+        <activity android:name=".DealersList"></activity>
+        <activity android:name=".AddDealer"></activity>
     </application>
 
 </manifest>
