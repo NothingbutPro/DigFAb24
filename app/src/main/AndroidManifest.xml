@@ -51,6 +51,8 @@
         <activity android:name=".New_Affiliate_Program"></activity>
         <activity android:name=".TotalAffiliateOrder"></activity>
         <activity android:name=".Accounting_manufacture"></activity>
+        <activity android:name=".DealersList"></activity>
+        <activity android:name=".AddDealer"></activity>
     </application>
 
 </manifest>
