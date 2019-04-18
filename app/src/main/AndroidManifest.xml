@@ -55,6 +55,13 @@
         <activity android:name=".AddDealer"></activity>
         <activity android:name=".Product_Stock"></activity>
         <activity android:name=".WalletActivity"></activity>
+        <activity android:name=".Add_Discount"></activity>
+        <activity android:name=".Add_Products"></activity>
+        <activity android:name=".Staff_Activity"></activity>
+        <activity android:name=".Notifications"></activity>
+        <activity android:name=".Tracked_Order"></activity>
+        <activity android:name=".Tender_apply"></activity>
+
     </application>
 
 </manifest>

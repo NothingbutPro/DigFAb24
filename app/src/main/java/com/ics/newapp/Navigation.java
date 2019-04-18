@@ -82,7 +82,12 @@ public class Navigation extends AppCompatActivity
             navigationView = (NavigationView)findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
+            nav_Menu.findItem(R.id.nav_addis).setVisible(false);
             nav_Menu.findItem(R.id.dealerslist).setVisible(false);
+            nav_Menu.findItem(R.id.nav_addis).setVisible(false);
+            nav_Menu.findItem(R.id.nav_staff).setVisible(false);
+            nav_Menu.findItem(R.id.nav_pro_stock).setVisible(true);
+            nav_Menu.findItem(R.id.nav_addpro).setVisible(false);
         }if(sessionManager.isLoggedIn().equals("Manufacturer"))
         {
             id_name.setText("Nike Brand and NIKE, Inc.");
@@ -106,6 +111,10 @@ public class Navigation extends AppCompatActivity
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.accounting).setVisible(false);
             nav_Menu.findItem(R.id.dealerslist).setVisible(false);
+            nav_Menu.findItem(R.id.nav_wallet).setVisible(true);
+            nav_Menu.findItem(R.id.nav_addis).setVisible(false);
+            nav_Menu.findItem(R.id.nav_staff).setVisible(false);
+            nav_Menu.findItem(R.id.nav_addpro).setVisible(false);
             id_name.setText("Nilesh Upadhaya ");
             type.setText("NY@gmail.com");
 
@@ -114,6 +123,8 @@ public class Navigation extends AppCompatActivity
 
             nav_Menu.findItem(R.id.tenders).setVisible(false);
             nav_Menu.findItem(R.id.accounting).setVisible(false);
+            nav_Menu.findItem(R.id.nav_payearn).setVisible(true);
+            nav_Menu.findItem(R.id.nav_addis).setVisible(false);
             FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
             tx.replace(R.id.content_frame, new BuyerFragment());
             tx.commit();
@@ -242,20 +253,41 @@ public class Navigation extends AppCompatActivity
             Intent intent = new Intent(Navigation.this,ProfileActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.add_pro) {
-            Intent intent = new Intent(Navigation.this,Add_Products.class);
+        } else if (id == R.id.nav_pro_stock) {
+            Intent intent = new Intent(Navigation.this,Product_Stock.class);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_staff) {
             Intent intent = new Intent(Navigation.this,Staff_Activity.class);
             startActivity(intent);
-
-
+        } else if (id == R.id.nav_wallet) {
+            Intent intent = new Intent(Navigation.this,WalletActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_addnoti) {
+            Intent intent = new Intent(Navigation.this,Notifications.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_addis) {
+            Intent intent = new Intent(Navigation.this,Add_Discount.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_addpro) {
+            Intent intent = new Intent(Navigation.this,Add_Products.class);
+            startActivity(intent);
         }
 
         else if (id == R.id.nav_manage) {
             Intent intent = new Intent(Navigation.this,Followers.class);
+            startActivity(intent);
+
+
+        }  else if (id == R.id.nav_staff) {
+            Intent intent = new Intent(Navigation.this,Staff_Activity.class);
+            startActivity(intent);
+
+
+        }  else if (id == R.id.nav_addis) {
+            Intent intent = new Intent(Navigation.this,Add_Discount.class);
             startActivity(intent);
 
 

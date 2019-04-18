@@ -11,22 +11,23 @@
 
         <item
             android:id="@+id/nav_addpro"
-            android:icon="@drawable/home"
+            android:icon="@drawable/ic_playlist_add_black_24dp"
             android:title="Add Product" />
         <item
             android:id="@+id/nav_addnoti"
-            android:icon="@drawable/home"
+            android:icon="@drawable/ic_notifications_active_black_24dp"
             android:title="Notifications" />
         <item
             android:id="@+id/nav_addis"
-            android:icon="@drawable/home"
+            android:icon="@drawable/ic_menu_send"
             android:title="Add Discounts" />
 
         <item
             android:visible="false"
             android:id="@+id/nav_wallet"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Wallet" />
+
 
         <item
             android:id="@+id/nav_gallery"
@@ -44,11 +45,11 @@
         <item
             android:visible="false"
             android:id="@+id/nav_pro_stock"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_storage_black_24dp"
             android:title="Product Stock" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/follower"
+            android:icon="@drawable/ic_streetview_black_24dp"
             android:title="Followers" />
 
         <item
@@ -63,17 +64,17 @@
 
         <item
             android:id="@+id/chat"
-            android:icon="@drawable/follower"
+            android:icon="@drawable/ic_chat_black_24dp"
             android:title="Chat" />
 
         <item
             android:id="@+id/accounting"
-            android:icon="@drawable/follower"
+            android:icon="@drawable/ic_border_color_black_24dp"
             android:title="Accounting" />
 
         <item
             android:id="@+id/dealerslist"
-            android:icon="@drawable/follower"
+            android:icon="@drawable/ic_view_list_black_24dp"
             android:title="Dealers List" />
 
 
@@ -81,14 +82,20 @@
 
     <item android:title="Communicate">
         <menu>
+
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/billing"
                 android:title="Billing History" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
                 android:title="Logout" />
+            <item
+                android:visible="false"
+                android:id="@+id/nav_payearn"
+                android:icon="@drawable/ic_payn_black_24dp"
+                android:title="Pay And Earn" />
         </menu>
     </item>
 

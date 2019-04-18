@@ -103,15 +103,7 @@
                 android:textSize="12dip"
                 />
 
-            <TextView
-                android:id="@+id/plist_weight_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:paddingRight="25dip"
-                android:text="rs. 40000 to 60000"
-                android:textColor="#343434"
-                android:textSize="12dip" />
+
 
         </LinearLayout>
     </RelativeLayout>
@@ -194,15 +186,7 @@
                 android:textSize="12dip"
                 />
 
-            <TextView
-                android:id="@+id/plistx1t"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:paddingRight="25dip"
-                android:text="rs. 40000 to 60000"
-                android:textColor="#343434"
-                android:textSize="12dip" />
+
 
         </LinearLayout>
     </RelativeLayout>
@@ -284,16 +268,6 @@
                 android:textColor="#1d1d1d"
                 android:textSize="12dip"
                 />
-
-            <TextView
-                android:id="@+id/plistxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:paddingRight="25dip"
-                android:text="rs. 40000 to 60000"
-                android:textColor="#343434"
-                android:textSize="12dip" />
 
         </LinearLayout>
     </RelativeLayout>

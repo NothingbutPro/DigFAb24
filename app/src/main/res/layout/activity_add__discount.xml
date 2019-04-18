@@ -37,33 +37,6 @@ android:layout_height="match_parent">
         android:orientation="vertical"
         android:padding="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:src="@drawable/icons8picturesfolder96"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-
-                android:drawablePadding="5dp"
-                android:text="Product"
-                android:textColor="#000"
-                android:textSize="14dp" />
-
-            <EditText
-                android:hint="Special Discount Name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bt_bg"
-                android:inputType="textPersonName" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +51,7 @@ android:layout_height="match_parent">
                 android:layout_marginBottom="3dp"
                 android:drawableLeft="@drawable/date"
                 android:drawablePadding="5dp"
-                android:text="Discount Category "
+                android:text="Discount Code "
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -106,7 +79,7 @@ android:layout_height="match_parent">
                 android:layout_marginBottom="3dp"
                 android:drawableLeft="@drawable/date"
                 android:drawablePadding="5dp"
-                android:text="How Much of Discount"
+                android:text="Discount Percentage"
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -133,7 +106,7 @@ android:layout_height="match_parent">
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:drawablePadding="5dp"
-                android:text="Discount Expiry "
+                android:text="Product Id "
                 android:textColor="#000"
                 android:textSize="14dp" />
 

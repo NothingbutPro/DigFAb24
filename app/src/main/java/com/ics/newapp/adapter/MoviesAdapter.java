@@ -51,7 +51,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext() , TenderDetails.class);
+                Intent intent = new Intent(v.getContext() , InvoceVActivity.class);
                 v.getContext().startActivity(intent);
             }
         });

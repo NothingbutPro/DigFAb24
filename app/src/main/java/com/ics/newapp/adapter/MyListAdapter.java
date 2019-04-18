@@ -16,12 +16,15 @@ import com.ics.newapp.DetailsActivity;
 import com.ics.newapp.R;
 import com.ics.newapp.model.MyListData;
 
+import java.sql.Time;
+import java.util.Calendar;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder> {
 
     private MyListData[] listdata;
-
+    Calendar c = Calendar.getInstance();
     // RecyclerView recyclerView;
     public MyListAdapter(MyListData[] listdata) {
         this.listdata = listdata;
@@ -37,7 +40,9 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final MyListData myListData = listdata[position];
+        int wtf = position +3;
         holder.textView.setText(listdata[position].getDescription());
+        holder.textView2sdf.setText(String.valueOf(wtf).concat("PM"));
 //        if(position ==0)
 //        {
 
@@ -74,7 +79,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public TextView textView;
         public RelativeLayout relativeLayout;
         private Button bt_add;
-        TextView textView2df,textbrand;
+        TextView textView2df,textbrand,textView2sdf;
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
@@ -82,6 +87,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView = (TextView) itemView.findViewById(R.id.textView);
             this.textbrand = itemView.findViewById(R.id.textbrand);
             this.textView2df = itemView.findViewById(R.id.textView2df);
+            this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
             bt_add = (Button) itemView.findViewById(R.id.bt_add);
         }
