@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Staff_Activity"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+<android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_billHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2196F3">
 
-        <LinearLayout
-            android:weightSum="1"
-            android:gravity="center"
-            android:orientation="horizontal"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_weight="0.50"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:text="Apply For Tender"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:typeface="serif" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Add Products"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:typeface="serif" />
 
     </android.support.v7.widget.Toolbar>
-
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +45,8 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
+            <ImageView
+                android:src="@drawable/icons8picturesfolder96"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -59,6 +57,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:hint="Special Discount Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bt_bg"
@@ -79,7 +78,7 @@
                 android:layout_marginBottom="3dp"
                 android:drawableLeft="@drawable/date"
                 android:drawablePadding="5dp"
-                android:text="Quantity"
+                android:text="Discount Category "
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -107,7 +106,7 @@
                 android:layout_marginBottom="3dp"
                 android:drawableLeft="@drawable/date"
                 android:drawablePadding="5dp"
-                android:text="Quality"
+                android:text="How Much of Discount"
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -134,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:drawablePadding="5dp"
-                android:text="Prise Range(min. to max.)"
+                android:text="Discount Expiry "
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -160,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:drawablePadding="5dp"
-                android:text="Description"
+                android:text="Discount Code"
                 android:textColor="#000"
                 android:textSize="14dp" />
 
@@ -171,20 +170,11 @@
                 android:inputType="textPersonName" />
 
         </LinearLayout>
-
-
-
         <Button
-            android:id="@+id/apply"
+            android:id="@+id/add_pro"
+            android:text="Add New Discount"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/btn_shape"
-            android:text="Apply"
-            android:textAllCaps="false"
-            android:textColor="#fff" />
-
+            android:layout_height="wrap_content" />
     </LinearLayout>
-
-
+</ScrollView>
 </LinearLayout>
