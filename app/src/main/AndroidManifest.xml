@@ -53,6 +53,7 @@
         <activity android:name=".Accounting_manufacture"></activity>
         <activity android:name=".DealersList"></activity>
         <activity android:name=".AddDealer"></activity>
+        <activity android:name=".Product_Stock"></activity>
     </application>
 
 </manifest>
