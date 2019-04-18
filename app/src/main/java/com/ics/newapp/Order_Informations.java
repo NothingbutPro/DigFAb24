@@ -30,8 +30,8 @@ public class Order_Informations extends AppCompatActivity {
             {
                 tabLayout.addTab(tabLayout.newTab().setText("Order To Dealer"));
             }else {
-                tabLayout.addTab(tabLayout.newTab().setText("Order From Manufacturer"));
-                tabLayout.addTab(tabLayout.newTab().setText("Order to Buyer"));
+                tabLayout.addTab(tabLayout.newTab().setText("Order to Manufacturer"));
+                tabLayout.addTab(tabLayout.newTab().setText("Order from Buyer"));
             }
 
 

@@ -3,10 +3,12 @@ package com.ics.newapp;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageView;
 
 public class Accounting extends AppCompatActivity {
-
+    ImageView accid;
     WebView webView;
     String html = " <!DOCTYPE html>\n" +
             "<html lang=\"en\">\n" +
@@ -56,9 +58,14 @@ public class Accounting extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accounting);
-
+        accid = findViewById(R.id.accid);
         webView = findViewById(R.id.account);
-
+        accid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         webView.loadData(html, "text/html; charset=UTF-8",null);
 
     }

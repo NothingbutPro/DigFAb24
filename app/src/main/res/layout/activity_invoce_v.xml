@@ -90,6 +90,7 @@
                         android:text="From" />
 
                     <TextView
+                        android:id="@+id/fromsd"
                         android:textColor="#000"
                         android:textSize="16dp"
                         android:layout_marginBottom="3dp"
@@ -137,6 +138,7 @@
                         android:text="For" />
 
                     <TextView
+                        android:id="@+id/tosd"
                         android:textColor="#000"
                         android:layout_marginBottom="3dp"
                         android:textSize="16dp"
