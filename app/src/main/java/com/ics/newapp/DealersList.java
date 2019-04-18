@@ -17,12 +17,15 @@ public class DealersList extends AppCompatActivity {
     Toolbar toolbar_dealers;
     TextView addDealer;
     FrameLayout frame_deal;
-    LinearLayout to_avli ,hidethatsht;
+    LinearLayout to_avli ,hidethatsht,ccccc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dealers_list);
+
         to_avli = findViewById(R.id.to_avli);
+        ccccc = findViewById(R.id.ccccc);
         frame_deal = findViewById(R.id.frame_deal);
         hidethatsht = findViewById(R.id.hidethatsht);
         toolbar_dealers = (Toolbar)findViewById(R.id.toolbar_dealers);
@@ -36,6 +39,16 @@ public class DealersList extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
             }
         });
+        ccccc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hidethatsht.setVisibility(View.GONE);
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frame_deal ,new AveragePurchase()).commit();
+            }
+        });
+
         toolbar_dealers.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
