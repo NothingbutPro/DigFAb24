@@ -42,7 +42,7 @@ public class PendingFragment extends Fragment {
     DatePickerDialog.OnDateSetListener date;
     private String dateFlage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+   /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
@@ -67,7 +67,7 @@ public class PendingFragment extends Fragment {
             }
             return false;
         }
-    };
+    };*/
 
     public PendingFragment() {
         // Required empty public constructor
@@ -87,9 +87,9 @@ public class PendingFragment extends Fragment {
         month = (TextView)view.findViewById(R.id.month);
         //picDate();
 
-        mTextMessage = (TextView) view.findViewById(R.id.message);
+     /*   mTextMessage = (TextView) view.findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) view.findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);*/
 
         curdate = (TextView)view.findViewById(R.id.curdate);
         Date c = Calendar.getInstance().getTime();

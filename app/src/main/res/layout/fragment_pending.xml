@@ -16,7 +16,6 @@
         tools:context=".Main2Activity">
 
         <LinearLayout
-            android:layout_marginBottom="55dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -226,6 +225,7 @@
         </LinearLayout>
 
         <android.support.design.widget.BottomNavigationView
+            android:visibility="gone"
             android:id="@+id/navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
