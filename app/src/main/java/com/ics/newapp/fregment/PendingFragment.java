@@ -1,5 +1,7 @@
 package com.ics.newapp.fregment;
 
+import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,21 +10,37 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ics.newapp.ChatActivity;
 import com.ics.newapp.MainActivity;
+import com.ics.newapp.ProfileActivity;
 import com.ics.newapp.R;
+import com.ics.newapp.adapter.MyListAdapter;
+import com.ics.newapp.model.MyListData;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class PendingFragment extends Fragment {
     RelativeLayout relativeLayout;
-
+    TextView curdate, curtime, month;
     private TextView mTextMessage;
+    Calendar myCalendar;
+    ProgressDialog dialog;
+    DatePickerDialog.OnDateSetListener date;
+    private String dateFlage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -31,16 +49,20 @@ public class PendingFragment extends Fragment {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText("one");
+                 //   mTextMessage.setText("one");
+                    Intent intent = new Intent(getActivity(), ChatActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText("Two");
+                  //  mTextMessage.setText("Two");
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText("three");
+                   // mTextMessage.setText("three");
                     return true;
                 case R.id.navigation_profile:
-                    mTextMessage.setText("four");
+                  //  mTextMessage.setText("four");
+                    Intent intent1 = new Intent(getActivity(), ProfileActivity.class);
+                    startActivity(intent1);
                     return true;
             }
             return false;
@@ -62,18 +84,84 @@ public class PendingFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-    /*    relativeLayout = (RelativeLayout)view.findViewById(R.id.relativeLayout);
-
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
-        });*/
+        month = (TextView)view.findViewById(R.id.month);
+        //picDate();
 
         mTextMessage = (TextView) view.findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) view.findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        curdate = (TextView)view.findViewById(R.id.curdate);
+        Date c = Calendar.getInstance().getTime();
+        System.out.println("Current time => " + c);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String formattedDate = df.format(c);
+        curdate.setText(formattedDate);
+
+        //---------------------------------
+
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String currentTime = sdf.format(new Date());
+        curtime = (TextView)view.findViewById(R.id.curtime);
+        curtime.setText(currentTime);
+
+        myCalendar = Calendar.getInstance();
+
+        //--------------------------------
+
+
+        date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        month.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                dateFlage = "1";
+                new DatePickerDialog(getActivity(), date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        MyListData[] myListData = new MyListData[] {
+                new MyListData("Prakash Footwear", R.drawable.complogo),
+                new MyListData("Angel Cosmetics", R.drawable.sander),
+                new MyListData("Kq Beauty Crown", R.drawable.complogo),
+                new MyListData(
+                        "Anitas Aromatic Solutions", R.drawable.sander),
+                new MyListData(
+                        "Calcutta Footwear", R.drawable.complogo),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+        };
+
+        RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.my_recycler_view);
+        MyListAdapter adapter = new MyListAdapter(myListData);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter);
     }
+
+    private void updateLabel() {
+
+        if (dateFlage.equalsIgnoreCase("1")) {
+            String myFormat = "dd-MM-yyyy"; //In which you need put here
+            SimpleDateFormat sdf = new SimpleDateFormat(myFormat, new Locale("pt", "BR"));
+         //   dateInstaUP.setText(sdf.format(myCalendar.getTime()));
+         //   dateInstaUP.setTextColor(getResources().getColor(R.color.colorPrimary));
+        }
+    }
+
 }
