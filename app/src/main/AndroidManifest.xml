@@ -14,7 +14,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile_Average_perchase"></activity>
+        <activity android:name=".Product_SubCategory"></activity>
+        <activity android:name=".Profile_Average_perchase" />
         <activity android:name=".Profile_Manu_Dealer" />
         <activity android:name=".Order_Informations" />
         <activity android:name=".Tender_Description" />
