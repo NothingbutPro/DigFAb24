@@ -19,19 +19,18 @@ public class Manufacturer_Deals extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.manufacure, container, false);
-        manu_fac = view.findViewById(R.id.manu_fac);
-        manu_fac.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity() , ChatActivity.class);
-                startActivity(intent);
-            }
-        });
+//        manu_fac = view.findViewById(R.id.manu_fac);
+//        manu_fac.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity() , ChatActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         return view;
 //        return inflater.inflate(R.layout.manufacure, container, false);
 
     }
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

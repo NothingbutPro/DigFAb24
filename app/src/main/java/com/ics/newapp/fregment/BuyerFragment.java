@@ -45,7 +45,7 @@ public class BuyerFragment extends Fragment {
     final int pixelsToMove = 500;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private static int currentPage = 0;
-    private static final Integer[] XMEN = {R.drawable.one, R.drawable.newonw,R.drawable.picofapp};
+    private static final Integer[] XMEN = {R.drawable.one, R.drawable.newonw};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
     Button btn;
     LinearLayout sad;

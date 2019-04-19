@@ -95,7 +95,7 @@
                 android:visible="false"
                 android:id="@+id/nav_payearn"
                 android:icon="@drawable/ic_payn_black_24dp"
-                android:title="Pay And Earn" />
+                android:title="Play And Earn" />
         </menu>
     </item>
 

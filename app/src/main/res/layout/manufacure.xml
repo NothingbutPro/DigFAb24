@@ -15,364 +15,376 @@
         android:layout_width="match_parent"
         android:layout_height="45dp">
 
-        <SearchView
-            android:queryHint="Search Here"
-            android:iconifiedByDefault="false"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--<SearchView-->
+            <!--android:queryHint="Search Here"-->
+            <!--android:iconifiedByDefault="false"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
     </LinearLayout>
-
     <LinearLayout
-        android:id="@+id/manu_fac"
-        android:orientation="vertical"
+        android:weightSum="3"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@drawable/border"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.80"
-                    android:src="@drawable/complogo"
-                    app:civ_border_color="#000"
-                    app:civ_border_width="0.5dp" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="0.20"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.32"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:text="Nike Brand and NIKE, Inc."
-                            android:id="@+id/textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:text="Footwear"
-                            android:textSize="12dp" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text=" Mumbai / Maharashtra - 400030"
-                            android:textSize="12dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.68"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:src="@drawable/chtt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <!---->
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@drawable/border"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.80"
-                    android:src="@drawable/alogo"
-                    app:civ_border_color="#000"
-                    app:civ_border_width="0.5dp" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="0.20"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.32"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:text="King Metal Products"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:text="Infocentroid Software Solutions"
-                            android:textSize="12dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text=" Mumbai / Maharashtra - 400022"
-                            android:textSize="12dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.68"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:src="@drawable/chtt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <!---->
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@drawable/border"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.80"
-                    android:src="@drawable/aa"
-                    app:civ_border_color="#000"
-                    app:civ_border_width="0.5dp" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="0.20"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.32"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:text="Aarti Industries Ltd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:text="Industrial Chemical"
-                            android:textSize="12dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Mumbai / Maharashtra - 400080"
-                            android:textSize="12dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.68"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:src="@drawable/chtt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <!---->
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@drawable/border"
-            android:padding="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.80"
-                    android:src="@drawable/as"
-                    app:civ_border_color="#000"
-                    app:civ_border_width="0.5dp" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="0.20"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.32"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:text="Asian Paint Ltd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="3dp"
-                            android:text="Chemical"
-                            android:textSize="12dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Mumbai / Maharashtra - 400055"
-                            android:textSize="12dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.68"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:src="@drawable/chtt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/pendingview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </android.support.v7.widget.RecyclerView>
-
-        </LinearLayout>
+        </TextView>
 
     </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/manu_fac"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:id="@+id/relativeLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:padding="5dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:id="@+id/profile_image"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="0.80"-->
+                    <!--android:src="@drawable/complogo"-->
+                    <!--app:civ_border_color="#000"-->
+                    <!--app:civ_border_width="0.5dp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="3dp"-->
+                    <!--android:layout_weight="0.20"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.32"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:text="Nike Brand and NIKE, Inc."-->
+                            <!--android:id="@+id/textView"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="15dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/textView1"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:text="Footwear"-->
+                            <!--android:textSize="12dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/textView2"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:text=" Mumbai / Maharashtra - 400030"-->
+                            <!--android:textSize="12dp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="0.68"-->
+                        <!--android:gravity="bottom"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:src="@drawable/chtt"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--&lt;!&ndash;&ndash;&gt;-->
+
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:padding="5dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="0.80"-->
+                    <!--android:src="@drawable/alogo"-->
+                    <!--app:civ_border_color="#000"-->
+                    <!--app:civ_border_width="0.5dp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="3dp"-->
+                    <!--android:layout_weight="0.20"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.32"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:text="King Metal Products"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="15dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:text="Infocentroid Software Solutions"-->
+                            <!--android:textSize="12dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:text=" Mumbai / Maharashtra - 400022"-->
+                            <!--android:textSize="12dp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="0.68"-->
+                        <!--android:gravity="bottom"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:src="@drawable/chtt"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--&lt;!&ndash;&ndash;&gt;-->
+
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:padding="5dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="0.80"-->
+                    <!--android:src="@drawable/aa"-->
+                    <!--app:civ_border_color="#000"-->
+                    <!--app:civ_border_width="0.5dp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="3dp"-->
+                    <!--android:layout_weight="0.20"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.32"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:text="Aarti Industries Ltd"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="15dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:text="Industrial Chemical"-->
+                            <!--android:textSize="12dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:text="Mumbai / Maharashtra - 400080"-->
+                            <!--android:textSize="12dp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="0.68"-->
+                        <!--android:gravity="bottom"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:src="@drawable/chtt"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--&lt;!&ndash;&ndash;&gt;-->
+
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:padding="5dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="0.80"-->
+                    <!--android:src="@drawable/as"-->
+                    <!--app:civ_border_color="#000"-->
+                    <!--app:civ_border_width="0.5dp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="3dp"-->
+                    <!--android:layout_weight="0.20"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="1">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.32"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:text="Asian Paint Ltd"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:textColor="#000"-->
+                            <!--android:textSize="15dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="3dp"-->
+                            <!--android:text="Chemical"-->
+                            <!--android:textSize="12dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:text="Mumbai / Maharashtra - 400055"-->
+                            <!--android:textSize="12dp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="0.68"-->
+                        <!--android:gravity="bottom"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:src="@drawable/chtt"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone">-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/pendingview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
 
 
 

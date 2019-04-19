@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
-                android:drawableLeft="@drawable/date"
+
                 android:drawablePadding="5dp"
                 android:text="Quantity"
                 android:textColor="#000"
@@ -93,33 +93,7 @@
                 android:inputType="textPersonName" />
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:drawableLeft="@drawable/date"
-                android:drawablePadding="5dp"
-                android:text="Quality"
-                android:textColor="#000"
-                android:textSize="14dp" />
-
-            <EditText
-                android:id="@+id/dg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bt_bg"
-                android:editable="false"
-                android:enabled="false"
-                android:inputType="textPersonName" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,7 +128,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:drawableLeft="@drawable/remark"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -182,7 +156,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
-                android:drawableLeft="@drawable/date"
                 android:drawablePadding="5dp"
                 android:text="Location"
                 android:textColor="#000"

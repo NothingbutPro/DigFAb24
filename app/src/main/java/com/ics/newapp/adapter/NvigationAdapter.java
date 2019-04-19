@@ -48,7 +48,8 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                 {
                     Buyers_Deals buyers_deals = new Buyers_Deals();
                     return buyers_deals;
-                }else{
+                }else
+                    {
                     PendingFragment pendingFragment = new PendingFragment();
                     return pendingFragment;
                 }
@@ -58,7 +59,8 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                 {
                     Pending_Deals buyers_deals = new Pending_Deals();
                     return buyers_deals;
-                }else {
+                }else
+                    {
                     CompletedFragment completedFragment = new CompletedFragment();
                     return completedFragment;
                 }

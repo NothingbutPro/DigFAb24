@@ -1,5 +1,6 @@
 package com.ics.newapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.ArrayList;
@@ -91,6 +92,10 @@ public class Product_SubCategory extends AppCompatActivity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
+                Intent intent = new Intent(v.getContext() , Order_Products.class);
+                intent.putExtra("namewa" ,  listDataChild.get(
+                        listDataHeader.get(groupPosition)).get(childPosition));
+                startActivity(intent);
                 return false;
             }
         });
