@@ -32,7 +32,7 @@ public class NvigationAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
-            case 0:
+           /* case 0:
                 Toast.makeText(myContext, ""+sessionManager.isLoggedIn(), Toast.LENGTH_SHORT).show();
                 if(sessionManager.isLoggedIn().equals("Dealers"))
                 {
@@ -41,9 +41,9 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                 }else {
                     RelatedFragment relatedFragment = new RelatedFragment();
                     return relatedFragment;
-                }
+                }*/
 
-            case 1:
+            case 0:
                 if(sessionManager.isLoggedIn().equals("Dealers"))
                 {
                     Buyers_Deals buyers_deals = new Buyers_Deals();
@@ -53,7 +53,7 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                     return pendingFragment;
                 }
 
-            case 2:
+            case 1:
                 if(sessionManager.isLoggedIn().equals("Dealers"))
                 {
                     Pending_Deals buyers_deals = new Pending_Deals();

@@ -100,7 +100,7 @@ public class Navigation extends AppCompatActivity
             nav_Menu.findItem(R.id.tenders).setVisible(false);
 
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
-            tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
+            //tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
             tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
         }
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
