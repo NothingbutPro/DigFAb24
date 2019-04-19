@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         mainid = findViewById(R.id.mainid);
         comname = findViewById(R.id.comname);
         cop = findViewById(R.id.copx);

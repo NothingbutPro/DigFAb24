@@ -203,7 +203,7 @@ public class Navigation extends AppCompatActivity
                 MenuItem menuItem = menu.findItem(R.id.cart_item);
 //                menuItem.setVisible(true);
                 MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
-                menuItem1.setTitle(" Hi Manufacturer");
+                menuItem1.setTitle("Hi Manufacturer");
             }
 
 
