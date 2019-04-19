@@ -250,7 +250,7 @@ public class Navigation extends AppCompatActivity
 //            tx.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(Navigation.this,ProfileActivity.class);
+            Intent intent = new Intent(Navigation.this,Profile_Manu_Dealer.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_pro_stock) {
