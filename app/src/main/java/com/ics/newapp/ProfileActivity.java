@@ -33,32 +33,32 @@ public class ProfileActivity extends AppCompatActivity {
         following = (TextView)findViewById(R.id.following);
         follower = (TextView)findViewById(R.id.follower);
         proname =findViewById(R.id.pronamemn);
-        proname.setText(getIntent().getStringExtra("ideaname"));
+//        proname.setText(getIntent().getStringExtra("ideaname"));
         profile_image = findViewById(R.id.profile_image);
         viewers= findViewById(R.id.viewers);
         if(sessionManager.isLoggedIn().equals("Manufacturer"))
         {
             profile_image.setImageResource(R.drawable.complogo);
-            proname.setText("Nike Brand and NIKE, Inc.");
+//            proname.setText("Nike Brand and NIKE, Inc.");
         }
         if(sessionManager.isLoggedIn().equals("Dealers"))
         {
             profile_image.setImageResource(R.drawable.boythree);
-            proname.setText("Parag Sharma");
-            mainid.setText("Footwear dealer");
+//            proname.setText("Parag Sharma");
+        //    mainid.setText("Footwear dealer");
         }if(sessionManager.isLoggedIn().equals("Buyers"))
         {
             profile_image.setImageResource(R.drawable.boythree);
-            proname.setText("Nilesh Upadhaya ");
-            mainid.setText("");
+          //  proname.setText("Nilesh Upadhaya ");
+          //  mainid.setText("");
             cop.setVisibility(View.GONE);
             comname.setVisibility(View.GONE);
         }
         if(sessionManager.isLoggedIn().equals("Affiliate Marketer"))
         {
 //            profile_image.setImageResource(R.drawable.boythree);
-            proname.setText("Prakash Upadhaya ");
-            mainid.setText("Affiliate Marketer");
+         //   proname.setText("Prakash Upadhaya ");
+         //   mainid.setText("Affiliate Marketer");
         }
         viewers.setOnClickListener(new View.OnClickListener() {
             @Override

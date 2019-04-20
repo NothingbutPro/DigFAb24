@@ -24,6 +24,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
     private MyListData[] listdata;
    public Context context;
+
     Calendar c = Calendar.getInstance();
     // RecyclerView recyclerView;
 
@@ -45,12 +46,14 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         final MyListData myListData = listdata[position];
         int wtf = position +3;
         holder.textView.setText(listdata[position].getDescription());
+
         holder.textView2sdf.setText(String.valueOf(wtf).concat("PM"));
 //        if(position ==0)
 //        {
 
             if(holder.sessionManager.isLoggedIn().equals("Manufacturer"))
             {
+
                 holder.textbrand.setText("Dealer");
             }else if(holder.sessionManager.isLoggedIn().equals("Dealer")){
                 holder.textbrand.setText("Dealer");

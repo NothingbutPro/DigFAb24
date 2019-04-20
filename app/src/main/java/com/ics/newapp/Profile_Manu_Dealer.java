@@ -65,6 +65,7 @@ public class Profile_Manu_Dealer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Profile_Manu_Dealer.this,ProfileActivity.class);
+                intent.putExtra("ideaname" , mainid.getText().toString());
                 startActivity(intent);
                // finish();
             }
