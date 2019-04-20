@@ -24,6 +24,12 @@
 
         <item
             android:visible="false"
+            android:id="@+id/nav_occassion"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Occasion" />
+
+        <item
+            android:visible="false"
             android:id="@+id/nav_wallet"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Wallet" />

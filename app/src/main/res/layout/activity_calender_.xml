@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calender_Activity">
+    tools:context=".Calender_Activity"
+    android:weightSum="1"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_weight="0.10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/sreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-</android.support.constraint.ConstraintLayout>
+
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.90"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/setcal"
+            android:text="Set Reminder"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

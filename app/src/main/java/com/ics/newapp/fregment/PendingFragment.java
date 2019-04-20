@@ -20,10 +20,13 @@ import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.ics.newapp.Calender_Activity;
 import com.ics.newapp.Call_splash_screen;
 import com.ics.newapp.ChatActivity;
 import com.ics.newapp.MainActivity;
+import com.ics.newapp.Navigation;
 import com.ics.newapp.ProfileActivity;
 import com.ics.newapp.R;
 import com.ics.newapp.adapter.MyListAdapter;
@@ -119,10 +122,13 @@ public class PendingFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                dateFlage = "1";
-                new DatePickerDialog(getActivity(), date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                Intent intent = new Intent(getActivity(), Calender_Activity.class);
+                //Toast.makeText(getActivity(), "Remainder set", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+//                dateFlage = "1";
+//                new DatePickerDialog(getActivity(), date, myCalendar
+//                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+//                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
 
