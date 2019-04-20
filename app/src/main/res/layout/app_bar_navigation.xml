@@ -19,7 +19,7 @@
             android:weightSum="1">
 
         <android.support.v7.widget.Toolbar
-
+            style="@style/Test_Text"
             android:layout_weight="0.3"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"

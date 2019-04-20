@@ -100,8 +100,7 @@
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/personnnn"
                                 android:drawablePadding="5dp"
-                                android:gravity="center|start"
-                                android:text="Suresh Sharma" />
+                                android:gravity="center|start" />
 
                             <TextView
                                 android:textSize="11dp"
@@ -142,7 +141,7 @@
                                 android:drawableLeft="@drawable/personnnn"
                                 android:drawablePadding="5dp"
                                 android:gravity="center|start"
-                                android:text="Sapna Sharma" />
+                               />
 
                             <TextView
                                 android:textSize="11dp"
@@ -175,16 +174,17 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/name3"
                                 android:textColor="#000"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/personnnn"
                                 android:drawablePadding="5dp"
                                 android:gravity="center|start"
-                                android:text="Anand kushwah" />
+                              />
 
                             <TextView
-                                android:id="@+id/name3"
+
                                 android:textSize="11dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

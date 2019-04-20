@@ -26,7 +26,6 @@
             app:showAsAction="always" />
 
         <item
-
             android:visible="true"
             android:id="@+id/locsisdf"
             android:orderInCategory="100"

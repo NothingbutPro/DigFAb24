@@ -27,6 +27,7 @@ import com.ics.newapp.ChatActivity;
 import com.ics.newapp.MainActivity;
 import com.ics.newapp.ProfileActivity;
 import com.ics.newapp.R;
+import com.ics.newapp.SeasonManager.SessionManager;
 import com.ics.newapp.adapter.MyListAdapter;
 import com.ics.newapp.model.MyListData;
 
@@ -38,14 +39,16 @@ import java.util.Locale;
 
 public class PendingFragment extends Fragment {
     RelativeLayout relativeLayout;
+    TextView name , name2 , name3;
     TextView curdate, curtime, month;
     private TextView mTextMessage;
     Calendar myCalendar;
+    MyListData[] myListData;
     ProgressDialog dialog;
     DatePickerDialog.OnDateSetListener date;
     private String dateFlage;
     View view;
-
+SessionManager sessionManager;
 
     LinearLayout ll_click;
 
@@ -57,6 +60,7 @@ public class PendingFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_pending , container , false);
+
         return inflater.inflate(R.layout.fragment_pending, container, false);
 
     }
@@ -67,6 +71,20 @@ public class PendingFragment extends Fragment {
 
         month = (TextView)view.findViewById(R.id.month);
         ll_click=view.findViewById(R.id.click_call);
+        name = view.findViewById(R.id.name);
+        name2 = view.findViewById(R.id.name2);
+        name3 = view.findViewById( R.id.name3);
+        sessionManager = new SessionManager(view.getContext());
+        if(sessionManager.isLoggedIn().equals("Manufacturer")) {
+            name.setText("Prakash Footwear");
+            name2.setText("Angel Cosmetics");
+            name3.setText("Kq Beauty Crown");
+        }else {
+
+            name.setText("Nike INC");
+            name2.setText("Fast Track");
+            name3.setText("Lakme Cosmetics");
+        }
         //picDate();
 
      /*   mTextMessage = (TextView) view.findViewById(R.id.message);
@@ -126,19 +144,41 @@ public class PendingFragment extends Fragment {
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-
-        MyListData[] myListData = new MyListData[] {
-                new MyListData("Prakash Footwear", R.drawable.complogo),
-                new MyListData("Angel Cosmetics", R.drawable.sander),
-                new MyListData("Kq Beauty Crown", R.drawable.complogo),
-                new MyListData(
-                        "Anitas Aromatic Solutions", R.drawable.sander),
-                new MyListData(
-                        "Calcutta Footwear", R.drawable.complogo),
+       if(sessionManager.isLoggedIn().equals("Manufacturer"))
+       {
+            myListData = new MyListData[] {
+                   new MyListData("Prakash Footwear", R.drawable.complogo),
+                   new MyListData("Angel Cosmetics", R.drawable.sander),
+                   new MyListData("Kq Beauty Crown", R.drawable.complogo),
+                   new MyListData(
+                           "Anitas Aromatic Solutions", R.drawable.sander),
+                   new MyListData(
+                           "Calcutta Footwear", R.drawable.complogo),
 //                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
 //                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
 
-        };
+           };
+           name.setText("Prakash Footwear");
+           name2.setText("Angel Cosmetics");
+           name3.setText("Kq Beauty Crown");
+       }else {
+           myListData = new MyListData[] {
+                   new MyListData("Nike INC", R.drawable.complogo),
+                   new MyListData("Lakme Cosmetics", R.drawable.sander),
+                   new MyListData("Fast Track", R.drawable.complogo),
+                   new MyListData(
+                           "Ansian Paints", R.drawable.sander),
+                   new MyListData(
+                           "Peter England", R.drawable.complogo),
+//                new MyListData("Balkrishna Industries Ltd (BKT)", R.drawable.complogo),
+//                new MyListData("Bayer CropScience Ltd", R.drawable.complogo),
+
+           };
+           name.setText("Nike INC");
+           name2.setText("Fast Track");
+           name3.setText("Lakme Cosmetics");
+       }
+
 
         RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.my_recycler_view);
         MyListAdapter adapter = new MyListAdapter(view ,myListData);

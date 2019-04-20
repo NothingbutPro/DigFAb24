@@ -44,15 +44,15 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                 }*/
 
             case 0:
-                if(sessionManager.isLoggedIn().equals("Dealers"))
-                {
+//                if(sessionManager.isLoggedIn().equals("Dealers"))
+//                {
                     PendingFragment buyers_deals = new PendingFragment();
                     return buyers_deals;
-                }else
-                    {
-                        PendingFragment buyers_deals = new PendingFragment();
-                   return buyers_deals;
-                }
+//                }else
+//                    {
+//                        PendingFragment buyers_deals = new PendingFragment();
+//                   return buyers_deals;
+//                }
 //
 //            case 1:
 //                if(sessionManager.isLoggedIn().equals("Dealers"))

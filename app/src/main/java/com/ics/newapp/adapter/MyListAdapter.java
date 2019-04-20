@@ -56,7 +56,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 
                 holder.textbrand.setText("Dealer");
             }else if(holder.sessionManager.isLoggedIn().equals("Dealer")){
-                holder.textbrand.setText("Dealer");
+                holder.textbrand.setText("Manufacturer");
             }
             holder.imageView.setImageResource(R.drawable.prof);
 //        }

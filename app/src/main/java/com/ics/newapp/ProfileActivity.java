@@ -38,17 +38,17 @@ public class ProfileActivity extends AppCompatActivity {
         viewers= findViewById(R.id.viewers);
         if(sessionManager.isLoggedIn().equals("Manufacturer"))
         {
-            profile_image.setImageResource(R.drawable.complogo);
+            profile_image.setImageResource(R.drawable.prof);
 //            proname.setText("Nike Brand and NIKE, Inc.");
         }
         if(sessionManager.isLoggedIn().equals("Dealers"))
         {
-            profile_image.setImageResource(R.drawable.boythree);
+            profile_image.setImageResource(R.drawable.complogo);
 //            proname.setText("Parag Sharma");
         //    mainid.setText("Footwear dealer");
         }if(sessionManager.isLoggedIn().equals("Buyers"))
         {
-            profile_image.setImageResource(R.drawable.boythree);
+            profile_image.setImageResource(R.drawable.prof);
           //  proname.setText("Nilesh Upadhaya ");
           //  mainid.setText("");
             cop.setVisibility(View.GONE);
