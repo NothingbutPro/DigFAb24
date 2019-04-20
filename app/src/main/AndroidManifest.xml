@@ -14,7 +14,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Subcatigory_products"></activity>
+        <activity android:name=".Calender_Activity"></activity>
+        <activity android:name=".Call_splash_screen" />
+        <activity android:name=".Subcatigory_products" />
         <activity android:name=".Dealer_Order_Info" />
         <activity android:name=".Order_Products" />
         <activity android:name=".Product_SubCategory" />

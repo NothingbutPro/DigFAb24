@@ -17,9 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ics.newapp.Call_splash_screen;
 import com.ics.newapp.ChatActivity;
 import com.ics.newapp.MainActivity;
 import com.ics.newapp.ProfileActivity;
@@ -43,6 +45,9 @@ public class PendingFragment extends Fragment {
     private String dateFlage;
     View view;
 
+
+    LinearLayout ll_click;
+
     public PendingFragment() {
         // Required empty public constructor
     }
@@ -60,6 +65,7 @@ public class PendingFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         month = (TextView)view.findViewById(R.id.month);
+        ll_click=view.findViewById(R.id.click_call);
         //picDate();
 
      /*   mTextMessage = (TextView) view.findViewById(R.id.message);
@@ -85,6 +91,7 @@ public class PendingFragment extends Fragment {
         //--------------------------------
 
 
+
         date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
@@ -97,6 +104,16 @@ public class PendingFragment extends Fragment {
             }
 
         };
+
+        ll_click.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(getContext(), Call_splash_screen.class);
+                startActivity(i);
+            }
+        });
 
         month.setOnClickListener(new View.OnClickListener() {
 
@@ -134,8 +151,8 @@ public class PendingFragment extends Fragment {
         if (dateFlage.equalsIgnoreCase("1")) {
             String myFormat = "dd-MM-yyyy"; //In which you need put here
             SimpleDateFormat sdf = new SimpleDateFormat(myFormat, new Locale("pt", "BR"));
-         //   dateInstaUP.setText(sdf.format(myCalendar.getTime()));
-         //   dateInstaUP.setTextColor(getResources().getColor(R.color.colorPrimary));
+            //   dateInstaUP.setText(sdf.format(myCalendar.getTime()));
+            //   dateInstaUP.setTextColor(getResources().getColor(R.color.colorPrimary));
         }
     }
 

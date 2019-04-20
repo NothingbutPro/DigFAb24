@@ -109,6 +109,8 @@
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:text="Overview"
+                                android:textColor="#000"
+                                android:textStyle="bold"
                                 android:typeface="serif" />
 
 
