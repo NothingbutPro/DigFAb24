@@ -41,33 +41,7 @@ public class PendingFragment extends Fragment {
     ProgressDialog dialog;
     DatePickerDialog.OnDateSetListener date;
     private String dateFlage;
-
-   /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                 //   mTextMessage.setText("one");
-                    Intent intent = new Intent(getActivity(), ChatActivity.class);
-                    startActivity(intent);
-                    return true;
-                case R.id.navigation_dashboard:
-                  //  mTextMessage.setText("Two");
-                    return true;
-                case R.id.navigation_notifications:
-                   // mTextMessage.setText("three");
-                    return true;
-                case R.id.navigation_profile:
-                  //  mTextMessage.setText("four");
-                    Intent intent1 = new Intent(getActivity(), ProfileActivity.class);
-                    startActivity(intent1);
-                    return true;
-            }
-            return false;
-        }
-    };*/
+    View view;
 
     public PendingFragment() {
         // Required empty public constructor
@@ -76,6 +50,7 @@ public class PendingFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_pending , container , false);
         return inflater.inflate(R.layout.fragment_pending, container, false);
 
     }
@@ -148,7 +123,7 @@ public class PendingFragment extends Fragment {
         };
 
         RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.my_recycler_view);
-        MyListAdapter adapter = new MyListAdapter(myListData);
+        MyListAdapter adapter = new MyListAdapter(view ,myListData);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);

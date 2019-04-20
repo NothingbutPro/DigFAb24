@@ -17,7 +17,7 @@ import com.ics.newapp.model.MyListData;
 
 public class RelatedFragment extends Fragment {
    // private RecyclerView my_recycler_view;
-
+    View view;
     public RelatedFragment() {
         // Required empty public constructor
     }
@@ -25,6 +25,8 @@ public class RelatedFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_related , container , false);
+
         return inflater.inflate(R.layout.fragment_related, container, false);
 
     }
@@ -47,7 +49,7 @@ public class RelatedFragment extends Fragment {
         };
 
         RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.my_recycler_view);
-        MyListAdapter adapter = new MyListAdapter(myListData);
+        MyListAdapter adapter = new MyListAdapter(view, myListData);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);

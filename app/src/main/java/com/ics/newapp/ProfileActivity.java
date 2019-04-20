@@ -32,8 +32,8 @@ public class ProfileActivity extends AppCompatActivity {
         sessionManager = new SessionManager(this);
         following = (TextView)findViewById(R.id.following);
         follower = (TextView)findViewById(R.id.follower);
-        proname =findViewById(R.id.proname);
-
+        proname =findViewById(R.id.pronamemn);
+        proname.setText(getIntent().getStringExtra("ideaname"));
         profile_image = findViewById(R.id.profile_image);
         viewers= findViewById(R.id.viewers);
         if(sessionManager.isLoggedIn().equals("Manufacturer"))

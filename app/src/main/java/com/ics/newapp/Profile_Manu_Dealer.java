@@ -6,20 +6,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ics.newapp.SeasonManager.SessionManager;
+
 public class Profile_Manu_Dealer extends AppCompatActivity {
 
     TextView txt_analytics, txt_Average,txt_overvew,txt_Products;
-
-
+    TextView pronamemn;
+    TextView mainid;
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile__manu__dealer);
 
         txt_analytics=findViewById(R.id.analytics);
+        sessionManager = new SessionManager(this);
+        mainid = findViewById(R.id.mainid);
         txt_Average=findViewById(R.id.average);
         txt_Products=findViewById(R.id.products);
+        pronamemn= findViewById(R.id.pronamemn);
 
+        pronamemn.setText(getIntent().getStringExtra("ideaname"));
+        if(sessionManager.isLoggedIn().equals("Manufacturer"))
+        {
+            mainid.setText("Dealer");
+        }else if(sessionManager.isLoggedIn().equals("Dealers"))
+        {
+            mainid.setText("Manufacturer");
+        }
 //        txt_overvew.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

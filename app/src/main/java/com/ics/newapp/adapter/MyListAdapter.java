@@ -1,24 +1,21 @@
 package com.ics.newapp.adapter;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.ics.newapp.DetailsActivity;
-import com.ics.newapp.ProfileActivity;
+import com.ics.newapp.Profile_Manu_Dealer;
 import com.ics.newapp.R;
+import com.ics.newapp.SeasonManager.SessionManager;
 import com.ics.newapp.model.MyListData;
 
-import java.sql.Time;
 import java.util.Calendar;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -26,10 +23,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder> {
 
     private MyListData[] listdata;
+   public Context context;
     Calendar c = Calendar.getInstance();
     // RecyclerView recyclerView;
-    public MyListAdapter(MyListData[] listdata) {
+
+    public MyListAdapter(View activity, MyListData[] listdata) {
         this.listdata = listdata;
+        context = activity.getContext();
+
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -48,6 +49,12 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
 //        if(position ==0)
 //        {
 
+            if(holder.sessionManager.isLoggedIn().equals("Manufacturer"))
+            {
+                holder.textbrand.setText("Dealer");
+            }else if(holder.sessionManager.isLoggedIn().equals("Dealer")){
+                holder.textbrand.setText("Dealer");
+            }
             holder.imageView.setImageResource(R.drawable.prof);
 //        }
 
@@ -62,8 +69,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         holder.libelow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ProfileActivity.class);
-              //  intent.putExtra("ideaname" , ""+holder.textView.getText().toString());
+                Intent intent = new Intent(view.getContext(), Profile_Manu_Dealer.class);
+                intent.putExtra("ideaname" , holder.textView.getText().toString());
                 view.getContext().startActivity(intent);
                 // Toast.makeText(view.getContext(),"click on item",Toast.LENGTH_LONG).show();
             }
@@ -81,10 +88,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public TextView textView;
         public RelativeLayout relativeLayout;
         private LinearLayout libelow;
+        SessionManager sessionManager;
         TextView textView2df,textbrand,textView2sdf;
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
+
+            sessionManager = new SessionManager(itemView.getContext());
             this.imageView = (CircleImageView) itemView.findViewById(R.id.dunb_image);
             this.textView = (TextView) itemView.findViewById(R.id.textView);
             this.textbrand = itemView.findViewById(R.id.textbrand);

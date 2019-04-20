@@ -104,10 +104,10 @@ public class Navigation extends AppCompatActivity
         if (sessionManager.isLoggedIn().equals("Dealers")) {
             id_name.setText("Parag Sharma");
             type.setText("Footwear Dealer");
-
-            tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
-            tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
-            tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
+//
+//            tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
+//            tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
+//            tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
 
             navigationView = (NavigationView) findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
