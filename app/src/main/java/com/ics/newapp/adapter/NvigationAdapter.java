@@ -54,7 +54,7 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                     return pendingFragment;
                 }
 
-            case 1:
+           /* case 1:
                 if(sessionManager.isLoggedIn().equals("Dealers"))
                 {
                     Pending_Deals buyers_deals = new Pending_Deals();
@@ -63,7 +63,7 @@ public class NvigationAdapter extends FragmentPagerAdapter {
                     {
                     CompletedFragment completedFragment = new CompletedFragment();
                     return completedFragment;
-                }
+                }*/
 
             default:
                 return null;

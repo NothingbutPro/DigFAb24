@@ -34,8 +34,8 @@ public class Navigation extends AppCompatActivity
     TabLayout tabLayout;
     ViewPager viewPager;
     SessionManager sessionManager;
-    TextView id_name , type;
-   public static NavigationView navigationView;
+    TextView id_name, type;
+    public static NavigationView navigationView;
     ImageView imageView;
     private TextView mTextMessage;
 
@@ -74,7 +74,7 @@ public class Navigation extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 //        this.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-       // ((AppCompatActivity)ScrollingActivity.this).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        // ((AppCompatActivity)ScrollingActivity.this).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);
         sessionManager = new SessionManager(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -92,17 +92,16 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         Navigation.this.setTitle("DGFAB");
-         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
-        imageView= header.findViewById(R.id.imageView);
+        imageView = header.findViewById(R.id.imageView);
         id_name = header.findViewById(R.id.id_name);
         type = header.findViewById(R.id.type);
-        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
-        viewPager=(ViewPager)findViewById(R.id.viewPager1);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager1);
         sessionManager = new SessionManager(this);
-        if(sessionManager.isLoggedIn().equals("Dealers"))
-        {
+        if (sessionManager.isLoggedIn().equals("Dealers")) {
             id_name.setText("Parag Sharma");
             type.setText("Footwear Dealer");
 
@@ -110,7 +109,7 @@ public class Navigation extends AppCompatActivity
             tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
 
-            navigationView = (NavigationView)findViewById(R.id.nav_view);
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
             nav_Menu.findItem(R.id.nav_addis).setVisible(false);
@@ -119,26 +118,26 @@ public class Navigation extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_staff).setVisible(false);
             nav_Menu.findItem(R.id.nav_pro_stock).setVisible(true);
             nav_Menu.findItem(R.id.nav_addpro).setVisible(false);
-        }if(sessionManager.isLoggedIn().equals("Manufacturer"))
-        {
+        }
+        if (sessionManager.isLoggedIn().equals("Manufacturer")) {
             id_name.setText("Nike Brand and NIKE, Inc.");
             type.setText("media.relations@nike.com");
             imageView.setImageResource(R.drawable.complogo);
 
-            navigationView = (NavigationView)findViewById(R.id.nav_view);
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
             nav_Menu.findItem(R.id.tenders).setVisible(false);
 
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
             //tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
-            tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
+          //  tabLayout.addTab(tabLayout.newTab().setText("Completed Deals"));
         }
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        if(sessionManager.isLoggedIn().equals("Buyers")){
+        if (sessionManager.isLoggedIn().equals("Buyers")) {
 
             tabLayout.setVisibility(View.GONE);
-            navigationView = (NavigationView)findViewById(R.id.nav_view);
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.accounting).setVisible(false);
             nav_Menu.findItem(R.id.dealerslist).setVisible(false);
@@ -149,8 +148,8 @@ public class Navigation extends AppCompatActivity
             id_name.setText("Nilesh Upadhaya ");
             type.setText("NY@gmail.com");
 
-            navigationView = (NavigationView)findViewById(R.id.nav_view);
-             nav_Menu = navigationView.getMenu();
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
+            nav_Menu = navigationView.getMenu();
 
             nav_Menu.findItem(R.id.tenders).setVisible(false);
             nav_Menu.findItem(R.id.accounting).setVisible(false);
@@ -161,12 +160,12 @@ public class Navigation extends AppCompatActivity
             tx.commit();
 
 
-        }else {
+        } else {
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
             tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
             tabLayout.setSelectedTabIndicatorHeight((int) (3 * getResources().getDisplayMetrics().density));
             tabLayout.setTabTextColors(Color.parseColor("#CECACA"), Color.parseColor("#ffffff"));
-            final NvigationAdapter nvigationAdapter = new NvigationAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
+            final NvigationAdapter nvigationAdapter = new NvigationAdapter(this, getSupportFragmentManager(), tabLayout.getTabCount());
             viewPager.setAdapter(nvigationAdapter);
         }
 
@@ -208,21 +207,17 @@ public class Navigation extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
 
-        if(sessionManager.isLoggedIn().equals("Buyers"))
-        {
+        if (sessionManager.isLoggedIn().equals("Buyers")) {
 
-            if(sessionManager.isSkipped())
-        {
-            MenuItem menuItem = menu.findItem(R.id.cart_item);
-            menuItem.setVisible(true);
-            MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
-            menuItem1.setTitle("Hi Nilesh");
+            if (sessionManager.isSkipped()) {
+                MenuItem menuItem = menu.findItem(R.id.cart_item);
+                menuItem.setVisible(true);
+                MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
+                menuItem1.setTitle("Hi Nilesh");
+            }
         }
-        }
-        if(sessionManager.isLoggedIn().equals("Dealers"))
-        {
-            if(sessionManager.isSkipped())
-            {
+        if (sessionManager.isLoggedIn().equals("Dealers")) {
+            if (sessionManager.isSkipped()) {
                 MenuItem menuItem = menu.findItem(R.id.cart_item);
 //                menuItem.setVisible(true);
                 MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
@@ -231,10 +226,8 @@ public class Navigation extends AppCompatActivity
 
 
         }
-        if(sessionManager.isLoggedIn().equals("Manufacturer"))
-        {
-            if(sessionManager.isSkipped())
-            {
+        if (sessionManager.isLoggedIn().equals("Manufacturer")) {
+            if (sessionManager.isSkipped()) {
                 MenuItem menuItem = menu.findItem(R.id.cart_item);
 //                menuItem.setVisible(true);
                 MenuItem menuItem1 = menu.findItem(R.id.locsisdf);
@@ -270,8 +263,9 @@ public class Navigation extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        }  if (id == R.id.nav_oders) {
-            Intent intent = new Intent(Navigation.this,Order_Informations.class);
+        }
+        if (id == R.id.nav_oders) {
+            Intent intent = new Intent(Navigation.this, Order_Informations.class);
             startActivity(intent);
 //            tabLayout.removeAllTabs();
 //        //    tabLayout.removeAllViewsInLayout();
@@ -285,77 +279,71 @@ public class Navigation extends AppCompatActivity
 //            tx.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(Navigation.this,Profile_Manu_Dealer.class);
+            Intent intent = new Intent(Navigation.this, Profile_Manu_Dealer.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_pro_stock) {
-            Intent intent = new Intent(Navigation.this,Product_Stock.class);
+            Intent intent = new Intent(Navigation.this, Product_Stock.class);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_staff) {
-            Intent intent = new Intent(Navigation.this,Staff_Activity.class);
+            Intent intent = new Intent(Navigation.this, Staff_Activity.class);
             startActivity(intent);
         } else if (id == R.id.nav_wallet) {
-            Intent intent = new Intent(Navigation.this,WalletActivity.class);
+            Intent intent = new Intent(Navigation.this, WalletActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_addnoti) {
-            Intent intent = new Intent(Navigation.this,Notifications.class);
+            Intent intent = new Intent(Navigation.this, Notifications.class);
             startActivity(intent);
         } else if (id == R.id.nav_addis) {
-            Intent intent = new Intent(Navigation.this,Add_Discount.class);
+            Intent intent = new Intent(Navigation.this, Add_Discount.class);
             startActivity(intent);
-        }
-        else if (id == R.id.nav_addpro) {
-            Intent intent = new Intent(Navigation.this,Add_Products.class);
+        } else if (id == R.id.nav_addpro) {
+            Intent intent = new Intent(Navigation.this, Add_Products.class);
             startActivity(intent);
-        }
-
-        else if (id == R.id.nav_manage) {
-            Intent intent = new Intent(Navigation.this,Followers.class);
+        } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(Navigation.this, Followers.class);
             startActivity(intent);
 
 
-        }  else if (id == R.id.nav_staff) {
-            Intent intent = new Intent(Navigation.this,Staff_Activity.class);
+        } else if (id == R.id.nav_staff) {
+            Intent intent = new Intent(Navigation.this, Staff_Activity.class);
             startActivity(intent);
 
 
-        }  else if (id == R.id.nav_addis) {
-            Intent intent = new Intent(Navigation.this,Add_Discount.class);
+        } else if (id == R.id.nav_addis) {
+            Intent intent = new Intent(Navigation.this, Add_Discount.class);
             startActivity(intent);
 
 
         } else if (id == R.id.nav_share) {
-            Intent intent = new Intent(Navigation.this,BillingHistory.class);
+            Intent intent = new Intent(Navigation.this, BillingHistory.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_send) {
 
-        }
-        else if (id == R.id.tender) {
-            Intent intent = new Intent(Navigation.this,FregmentSection.class);
+        } else if (id == R.id.tender) {
+            Intent intent = new Intent(Navigation.this, FregmentSection.class);
             startActivity(intent);
         } else if (id == R.id.tenders) {
-            Intent intent = new Intent(Navigation.this,Tender_list.class);
+            Intent intent = new Intent(Navigation.this, Tender_list.class);
             startActivity(intent);
-        }      else if (id == R.id.chat) {
-            Intent intent = new Intent(Navigation.this,ChatActivity.class);
+        } else if (id == R.id.chat) {
+            Intent intent = new Intent(Navigation.this, ChatActivity.class);
             startActivity(intent);
-        }
-        else if (id == R.id.accounting) {
-            if(sessionManager.isLoggedIn().equals("Manufacturer")){
-                Intent intent = new Intent(Navigation.this,Accounting_manufacture.class);
+        } else if (id == R.id.accounting) {
+            if (sessionManager.isLoggedIn().equals("Manufacturer")) {
+                Intent intent = new Intent(Navigation.this, Accounting_manufacture.class);
                 startActivity(intent);
 
-            }else {
-                Intent intent = new Intent(Navigation.this,Accounting.class);
+            } else {
+                Intent intent = new Intent(Navigation.this, Accounting.class);
                 startActivity(intent);
             }
 
 
-        }
-        else if (id == R.id.dealerslist) {
+        } else if (id == R.id.dealerslist) {
             Intent intent = new Intent(Navigation.this, DealersList.class);
             startActivity(intent);
         } else if (id == R.id.nav_logout) {

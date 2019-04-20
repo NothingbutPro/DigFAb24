@@ -50,8 +50,8 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:src="@drawable/boyone"
                         app:civ_border_color="#000"
@@ -72,7 +72,7 @@
                         android:layout_marginBottom="3dp"
                         android:text="Ram Sharma"
                         android:textColor="#000"
-                        android:textSize="18dp" />
+                        android:textSize="16dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -108,8 +108,8 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:src="@drawable/prof"
                         app:civ_border_color="#000"
@@ -131,7 +131,7 @@
                         android:layout_marginBottom="3dp"
                         android:text="Riya Soni"
                         android:textColor="#000"
-                        android:textSize="18dp" />
+                        android:textSize="16dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -167,8 +167,8 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:src="@drawable/prof"
                         app:civ_border_color="#000"
@@ -190,7 +190,7 @@
                         android:layout_marginBottom="3dp"
                         android:text="Rohan Mehta"
                         android:textColor="#000"
-                        android:textSize="18dp" />
+                        android:textSize="16dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -225,8 +225,8 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:src="@drawable/prof"
                         app:civ_border_color="#000"
@@ -248,7 +248,7 @@
                         android:layout_marginBottom="3dp"
                         android:text="kriya Sharma"
                         android:textColor="#000"
-                        android:textSize="18dp" />
+                        android:textSize="16dp" />
 
                     <TextView
                         android:layout_width="match_parent"
