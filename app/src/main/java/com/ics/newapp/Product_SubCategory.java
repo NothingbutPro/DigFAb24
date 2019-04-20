@@ -92,9 +92,8 @@ public class Product_SubCategory extends AppCompatActivity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
-                Intent intent = new Intent(v.getContext() , Order_Products.class);
-                intent.putExtra("namewa" ,  listDataChild.get(
-                        listDataHeader.get(groupPosition)).get(childPosition));
+                Intent intent = new Intent(v.getContext() , Main3Activity.class);
+                intent.putExtra("namewa" ,  listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
                 startActivity(intent);
                 return false;
             }

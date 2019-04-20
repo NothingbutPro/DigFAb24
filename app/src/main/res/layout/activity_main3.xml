@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/lingo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Products"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:typeface="serif" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nmae"
+                android:text="Product name"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <ListView
+            android:id="@+id/mlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+     <!--   <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Samsung Galaxy note 7"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Samsung Galaxy note 9"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Samsung Galaxy S10"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Samsung Galaxy S10"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Samsung Galaxy S9+"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </android.support.v7.widget.CardView>
+-->
+    </LinearLayout>
+
+</LinearLayout>

@@ -107,7 +107,7 @@ public class Navigation extends AppCompatActivity
 //
 //            tabLayout.addTab(tabLayout.newTab().setText("Manufacturer Deals"));
 //            tabLayout.addTab(tabLayout.newTab().setText("Buyers Orders"));
-//            tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
+            tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
 
             navigationView = (NavigationView) findViewById(R.id.nav_view);
             Menu nav_Menu = navigationView.getMenu();
@@ -117,7 +117,7 @@ public class Navigation extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_addis).setVisible(false);
             nav_Menu.findItem(R.id.nav_staff).setVisible(false);
             nav_Menu.findItem(R.id.nav_pro_stock).setVisible(true);
-            nav_Menu.findItem(R.id.nav_addpro).setVisible(false);
+            nav_Menu.findItem(R.id.nav_addpro).setVisible(true);
         }
         if (sessionManager.isLoggedIn().equals("Manufacturer")) {
             id_name.setText("Nike Brand and NIKE, Inc.");
@@ -128,6 +128,7 @@ public class Navigation extends AppCompatActivity
             Menu nav_Menu = navigationView.getMenu();
             nav_Menu.findItem(R.id.tender).setVisible(false);
             nav_Menu.findItem(R.id.tenders).setVisible(false);
+            nav_Menu.findItem(R.id.nav_occassion).setVisible(true);
 
             tabLayout.addTab(tabLayout.newTab().setText("Pending Deals"));
             //tabLayout.addTab(tabLayout.newTab().setText("Related Deals"));
@@ -145,7 +146,7 @@ public class Navigation extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_addis).setVisible(false);
             nav_Menu.findItem(R.id.nav_staff).setVisible(false);
             nav_Menu.findItem(R.id.nav_addpro).setVisible(false);
-            id_name.setText("Nilesh Upadhaya ");
+            id_name.setText("Nilesh Upadhaya");
             type.setText("NY@gmail.com");
 
             navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -315,9 +316,12 @@ public class Navigation extends AppCompatActivity
         } else if (id == R.id.nav_addis) {
             Intent intent = new Intent(Navigation.this, Add_Discount.class);
             startActivity(intent);
-
-
-        } else if (id == R.id.nav_share) {
+        }
+        else if (id == R.id.nav_occassion) {
+            Intent intent = new Intent(Navigation.this, OccasionActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_share) {
             Intent intent = new Intent(Navigation.this, BillingHistory.class);
             startActivity(intent);
 

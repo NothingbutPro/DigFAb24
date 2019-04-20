@@ -80,7 +80,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.40"
-                            android:text="Ashoka Enterprises"
+                            android:text="Nike Brand and NIKE ,lnc."
                             android:textColor="#000"
                             android:textSize="16dp"
                             android:typeface="serif" />
