@@ -8,11 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ics.newapp.DetailsActivity;
+import com.ics.newapp.ProfileActivity;
 import com.ics.newapp.R;
 import com.ics.newapp.model.MyListData;
 
@@ -57,11 +59,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
              // Toast.makeText(view.getContext(),"click on item",Toast.LENGTH_LONG).show();
             }
         });
-        holder.bt_add.setOnClickListener(new View.OnClickListener() {
+        holder.libelow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(),DetailsActivity.class);
-                intent.putExtra("ideaname" , ""+holder.textView.getText().toString());
+                Intent intent = new Intent(view.getContext(), ProfileActivity.class);
+              //  intent.putExtra("ideaname" , ""+holder.textView.getText().toString());
                 view.getContext().startActivity(intent);
                 // Toast.makeText(view.getContext(),"click on item",Toast.LENGTH_LONG).show();
             }
@@ -78,7 +80,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
         public CircleImageView imageView;
         public TextView textView;
         public RelativeLayout relativeLayout;
-        private Button bt_add;
+        private LinearLayout libelow;
         TextView textView2df,textbrand,textView2sdf;
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
@@ -89,7 +91,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.ViewHolder
             this.textView2df = itemView.findViewById(R.id.textView2df);
             this.textView2sdf = itemView.findViewById(R.id.textView2sdf);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
-            bt_add = (Button) itemView.findViewById(R.id.bt_add);
+            libelow = (LinearLayout) itemView.findViewById(R.id.libelow);
         }
     }
 }
