@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ics.newapp.Calender_Activity;
 import com.ics.newapp.Call_splash_screen;
 import com.ics.newapp.ChatActivity;
 import com.ics.newapp.MainActivity;
@@ -138,10 +139,12 @@ SessionManager sessionManager;
 
             @Override
             public void onClick(View v) {
-                dateFlage = "1";
-                new DatePickerDialog(getActivity(), date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+//                dateFlage = "1";
+//                new DatePickerDialog(getActivity(), date, myCalendar
+//                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+//                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                Intent intent = new Intent(v.getContext() , Calender_Activity.class);
+                startActivity(intent);
             }
         });
        if(sessionManager.isLoggedIn().equals("Manufacturer"))
